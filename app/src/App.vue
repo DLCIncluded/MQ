@@ -164,8 +164,6 @@ export default {
 	display: flex;
 	flex-direction: column-reverse;
 	text-align: center;
-	
-	
 }
 .submit {
 	display: flex;
@@ -187,5 +185,19 @@ strong{
 }
 .wrapper>p {
 	margin:1em 0;
+}
+
+@media only screen and (max-width: 600px) {
+	.selections {
+		display:flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+	.selections>p {
+		flex-grow:1;
+		display: flex;
+		flex-direction: row;
+		text-align: center;
+	}
 }
 </style>
