@@ -9,3 +9,5 @@ Credits: [Garau, V., Woods, R., Chown, N., Hallett, S., Murray, F.,Wood, R.,Murr
 I do not own the questions, or content in the questions; I do not store this information. All processing is done in YOUR browser in memory, no data will ever be sent to me, or anyone else. It is not even saved when you close your browser and reopen. 
 
 All this site is for is to make taking the questionnaire easier, and I was bored, and too lazy to tally up the score myself... and yes I know that making this site was far more work than just doing a bit of adding... leave me alone lol 
+
+Take it here: https://dlcincluded.github.io/MQ/
