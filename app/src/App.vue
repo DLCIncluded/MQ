@@ -83,7 +83,7 @@ export default {
 					tooltips: [
 						{
 							to: function ( value ) {
-							return "Your Score";
+							return "<span class='score_slider'>Your Score</span>";
 							}
 						},
 						{

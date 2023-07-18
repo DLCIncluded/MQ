@@ -28,6 +28,8 @@ a,
   }
   .noUi-tooltip:has(> .under)
   {bottom: -150%!important;}
+  .noUi-handle:has(> .noUi-tooltip > .score_slider)
+  {background-color: rgb(0, 110, 255)!important;}
 
 @media (hover: hover) {
   a:hover {
@@ -37,7 +39,7 @@ a,
 .noUi-handle {
 	width: 10px !important;
 	right: -5px !important; /*  must be (width / 2) * -1 */
-	background: #AA00AA;
+	
  }
  .noUi-handle:before,.noUi-handle:after {
 	display:none!important;
