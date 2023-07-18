@@ -1,0 +1,28 @@
+# Logs
+/app/logs
+/app/*.log
+/app/npm-debug.log*
+/app/yarn-debug.log*
+/app/yarn-error.log*
+/app/pnpm-debug.log*
+/app/lerna-debug.log*
+
+/app/node_modules
+/app/.DS_Store
+/app/dist
+/app/dist-ssr
+/app/coverage
+/app/*.local
+
+/cypress/videos/
+/cypress/screenshots/
+
+# Editor directories and files
+/app/.vscode/*
+!.vscode/extensions.json
+/app/.idea
+/app/*.suo
+/app/*.ntvs*
+/app/*.njsproj
+/app/*.sln
+/app/*.sw?
