@@ -1,6 +1,9 @@
 <script>
+import noUiSlider from 'nouislider';
+import wNumb from 'wnumb';
 import { ref,computed } from 'vue';
 import { RouterLink, RouterView } from 'vue-router'
+import 'nouislider/dist/nouislider.css';
 export default {
 	data() {
 		return {
@@ -71,6 +74,43 @@ export default {
 			this.score = score
 			this.avg = score / 47
 			console.log(this.avg)
+
+			var slider = document.getElementById('slider');
+			if(!slider.noUiSlider){
+				noUiSlider.create(slider, {
+					start: [20,100, 211],
+					connect: [false,false,true, true],
+					tooltips: [
+						{
+							to: function ( value ) {
+							return "Your Score";
+							}
+						},
+						{
+							to: function ( value ) {
+							return "<span class='under'>Low</span>";
+							}
+						},
+						{
+							to: function ( value ) {
+							return  "<span class='under'>High</span>";
+							}
+						}
+					],
+					behaviour: 'unconstrained-tap',
+					range: {
+						'min': 0,
+						'max': 235
+					}
+				});
+			} 
+			
+
+			// // The display values can be used to control the slider
+			// valuesSlider.noUiSlider.set(['7', '28']);
+			console.log(score)
+			slider.noUiSlider.set([score,'178', '211']);
+			slider.noUiSlider.disable();
 		}
 	}
 }
@@ -133,20 +173,26 @@ export default {
 			<button @click="checkscore">Submit</button>
 		</div>
 
-		<div class="score_box" v-if="scorebox">
+		<div class="score_box" v-show="scorebox">
 			<p>{{score}} / 235</p>
 			<p>{{avg}}</p>
-			<!-- <p v-if="avg >= 4.15">
+			<p v-if="avg >= 4.16">
 				Autistic Likely -- disclaimer NOT A DOCTOR
 			</p>
-			<p v-else-if="avg<4.15 && avg>3.5">
+			<p v-else-if="avg<4.15 && avg>3.7">
 				Autisim possible -- disclaimer NOT A DOCTOR
 			</p>
 			<p v-else>
 				Allistic Likely -- disclaimer NOT A DOCTOR
-			</p> -->
+			</p>
+			<br>
 			<p>Average autistic score: ~4.15 with standard deviation: .347</p>
 			<p>Average allistic score: ~3.19 with standard deviation: .578</p>
+
+			<p>If your score falls anywhere to the right of "low" on the chart below, it is possible you fall on the autism spectrum. </p>
+			<div id="slider">
+			</div>
+			
 		</div>
 	</div>
 </template>
@@ -178,6 +224,7 @@ export default {
 }
 .submit>button:hover{
 	background-color: aquamarine;
+
 	cursor: pointer;
 }
 strong{
@@ -185,6 +232,10 @@ strong{
 }
 .wrapper>p {
 	margin:1em 0;
+}
+
+#slider {
+	margin-top:5em;
 }
 
 @media only screen and (max-width: 600px) {

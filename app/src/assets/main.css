@@ -14,6 +14,20 @@ a,
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
 }
+[disabled] .noUi-connect {
+	background: hsla(160, 100%, 37%, 1)!important;
+  }
+  [disabled] .noUi-connects {
+	
+	background: #d12545!important;
+  }
+  [disabled].noUi-target,
+  [disabled].noUi-handle,
+  [disabled] .noUi-handle {
+	cursor: default!important;
+  }
+  .noUi-tooltip:has(> .under)
+  {bottom: -150%!important;}
 
 @media (hover: hover) {
   a:hover {
