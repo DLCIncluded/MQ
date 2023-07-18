@@ -183,7 +183,7 @@ export default {
 				Autisim possible -- disclaimer NOT A DOCTOR
 			</p>
 			<p v-else>
-				Allistic Likely -- disclaimer NOT A DOCTOR
+				Autisim unlikely -- disclaimer NOT A DOCTOR
 			</p>
 			<br>
 			<p>Average autistic score: ~4.15 with standard deviation: .347</p>
