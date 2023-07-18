@@ -27,3 +27,16 @@ npm run dev
 ```sh
 npm run build
 ```
+deploy to gh-pages:
+```sh
+git add app/dist -f
+```
+
+```sh
+git commit -m [your commit message here]
+```
+
+```sh
+git subtree push --prefix app/dist origin gh-pages
+```
+
