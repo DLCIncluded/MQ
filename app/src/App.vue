@@ -33,7 +33,7 @@ export default {
 				{question: "I find it difficult to engage in a task of no interest to me even if it is important. ",reverse: false, val: 0},
 				{question: "I often find engaging in stimming (e.g.,fidgeting, rocking) to be relaxing. ",reverse: false, val: 0},
 				{question: "I am usually passionate about a few topics at any one time in my life. ",reverse: false, val: 0},
-				{question: "I have trouble filtering out sounds when I am not doing something I'm focusedon. ",reverse: false, val: 0},
+				{question: "I have trouble filtering out sounds when I am not doing something I'm focused on. ",reverse: false, val: 0},
 				{question: "I usually mean what I say and no more than that.",reverse: false, val: 0},
 				{question: "I often engage in lengthy discussions on topics I find interesting even though my conversational partner(s) do not. ",reverse: false, val: 0},
 				{question: "I sometimes accidentally say something others find offensive/ rude when I am focused on a task. ",reverse: false, val: 0},
@@ -157,7 +157,7 @@ export default {
 				<p><input type="radio" :name="index" :id="'r'+index+'2'" v-model="item.val" value="2"><label :for="'r'+index+'2'">Disagree</label></p>
 				<p><input type="radio" :name="index" :id="'r'+index+'3'" v-model="item.val" value="3"><label :for="'r'+index+'3'">Neither Agree or Disagree</label></p>
 				<p><input type="radio" :name="index" :id="'r'+index+'4'" v-model="item.val" value="4"><label :for="'r'+index+'4'">Agree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'5'" v-model="item.val" value="5"><label :for="'r'+index+'5'">StronglyAgree</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'5'" v-model="item.val" value="5"><label :for="'r'+index+'5'">Strongly Agree</label></p>
 			</div>
 			<div v-else class='selections'>
 				<p><input type="radio" :name="index" :id="'r'+index+'0'" v-model="item.val" value="0"><label :for="'r'+index+'0'">N/A</label></p>
@@ -165,7 +165,7 @@ export default {
 				<p><input type="radio" :name="index" :id="'r'+index+'2'" v-model="item.val" value="4"><label :for="'r'+index+'2'">Disagree</label></p>
 				<p><input type="radio" :name="index" :id="'r'+index+'3'" v-model="item.val" value="3"><label :for="'r'+index+'3'">Neither Agree or Disagree</label></p>
 				<p><input type="radio" :name="index" :id="'r'+index+'4'" v-model="item.val" value="2"><label :for="'r'+index+'4'">Agree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'5'" v-model="item.val" value="1"><label :for="'r'+index+'5'">StronglyAgree</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'5'" v-model="item.val" value="1"><label :for="'r'+index+'5'">Strongly Agree</label></p>
 			</div>
 		</div>
 		
