@@ -180,10 +180,10 @@ export default {
 				Autistic Likely -- disclaimer NOT A DOCTOR
 			</p>
 			<p v-else-if="avg<4.15 && avg>3.7">
-				Autisim possible -- disclaimer NOT A DOCTOR
+				Autism possible -- disclaimer NOT A DOCTOR
 			</p>
 			<p v-else>
-				Autisim unlikely -- disclaimer NOT A DOCTOR
+				Autism unlikely -- disclaimer NOT A DOCTOR
 			</p>
 			<br>
 			<p>Average autistic score: ~4.15 with standard deviation: .347</p>
