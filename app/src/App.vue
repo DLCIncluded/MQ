@@ -2,8 +2,10 @@
 // import noUiSlider from 'nouislider';
 // import wNumb from 'wnumb';
 import { ref,computed } from 'vue';
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router';
 import 'nouislider/dist/nouislider.css';
+import { create, all } from "mathjs";
+const math = create(all);
 export default {
 	data() {
 		return {
@@ -58,7 +60,8 @@ export default {
 				],
 				scorebox: false,
 				score: 0,
-				avg: 0
+				avg: 0,
+				scoreQuote: ""
 		}
 	},
 	mounted:function(){
@@ -80,7 +83,21 @@ export default {
 			this.score = score
 			this.avg = score / 47
 			this.avg = this.avg.toFixed(2) //fixes #6
+
+			//percentile math per #4 - user Pi2048 Thank you!
+			var autism_mean = 4.15
+			var autism_sd = 0.347
+			var autismpercentile = math.ceil(100*(1 - math.erf((autism_mean - this.avg ) / (math.sqrt(2) * autism_sd))) / 2)
+
+			var allistic_mean = 3.19
+			var allistic_sd = 0.578
+			var allisticpercentile = math.ceil(100*(1 - math.erf((allistic_mean - this.avg ) / (math.sqrt(2) * allistic_sd))) / 2)
+			this.scoreQuote ="This score falls in the "+autismpercentile+"th <a href='https://en.wikipedia.org/wiki/Percentile' target='_blank'>percentile</a> of the autistic population based on data from the initial validation study on the MQ."
 			console.log(this.avg)
+			console.log(this.scoreQuote)
+			
+			//for testing: var btns = document.querySelectorAll('[id$="5"]');for(var i=0;i<btns.length;i++){ btns[i].click(); }
+			
 
 			//removed slider for now, scoring issue #4
 			// var slider = document.getElementById('slider');
@@ -185,6 +202,8 @@ export default {
 			<br>
 			<p>Monotropism Score: {{score}} / 235</p>
 			<p>Average: {{avg}}</p>
+			<br>
+			<p v-html="scoreQuote"></p>
 			<!-- <p v-if="avg >= 4.16">
 				Autistic Likely -- disclaimer NOT A DOCTOR
 			</p>

@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "mathjs": "^11.9.0",
     "nouislider": "^15.7.1",
     "pinia": "^2.1.3",
     "vue": "^3.3.4",
