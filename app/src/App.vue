@@ -79,7 +79,7 @@ export default {
 			}
 			this.score = score
 			this.avg = score / 47
-			this.avg = this.avg.toFixed(3) //fixes #6
+			this.avg = this.avg.toFixed(2) //fixes #6
 			console.log(this.avg)
 
 			//removed slider for now, scoring issue #4
