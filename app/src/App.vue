@@ -1,6 +1,6 @@
 <script>
-import noUiSlider from 'nouislider';
-import wNumb from 'wnumb';
+// import noUiSlider from 'nouislider';
+// import wNumb from 'wnumb';
 import { ref,computed } from 'vue';
 import { RouterLink, RouterView } from 'vue-router'
 import 'nouislider/dist/nouislider.css';
@@ -79,44 +79,43 @@ export default {
 			}
 			this.score = score
 			this.avg = score / 47
+			this.avg = this.avg.toFixed(3) //fixes #6
 			console.log(this.avg)
 
-			var slider = document.getElementById('slider');
-			if(!slider.noUiSlider){
-				noUiSlider.create(slider, {
-					start: [20,100, 211],
-					connect: [false,false,true, true],
-					tooltips: [
-						{
-							to: function ( value ) {
-							return "<span class='score_slider'>Your Score</span>";
-							}
-						},
-						{
-							to: function ( value ) {
-							return "<span class='under'>Low</span>";
-							}
-						},
-						{
-							to: function ( value ) {
-							return  "<span class='under'>High</span>";
-							}
-						}
-					],
-					behaviour: 'unconstrained-tap',
-					range: {
-						'min': 0,
-						'max': 235
-					}
-				});
-			} 
+			//removed slider for now, scoring issue #4
+			// var slider = document.getElementById('slider');
+			// if(!slider.noUiSlider){
+			// 	noUiSlider.create(slider, {
+			// 		start: [20,100, 211],
+			// 		connect: [false,false,true, true],
+			// 		tooltips: [
+			// 			{
+			// 				to: function ( value ) {
+			// 				return "<span class='score_slider'>Your Score</span>";
+			// 				}
+			// 			},
+			// 			{
+			// 				to: function ( value ) {
+			// 				return "<span class='under'>Low</span>";
+			// 				}
+			// 			},
+			// 			{
+			// 				to: function ( value ) {
+			// 				return  "<span class='under'>High</span>";
+			// 				}
+			// 			}
+			// 		],
+			// 		behaviour: 'unconstrained-tap',
+			// 		range: {
+			// 			'min': 0,
+			// 			'max': 235
+			// 		}
+			// 	});
+			// } 
 			
-
-			// // The display values can be used to control the slider
-			// valuesSlider.noUiSlider.set(['7', '28']);
-			console.log(score)
-			slider.noUiSlider.set([score,'178', '211']);
-			slider.noUiSlider.disable();
+			// console.log(score)
+			// slider.noUiSlider.set([score,'178', '211']);
+			// slider.noUiSlider.disable();
 		}
 	}
 }
