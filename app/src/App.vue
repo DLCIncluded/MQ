@@ -61,7 +61,13 @@ export default {
 				avg: 0
 		}
 	},
+	mounted:function(){
+		this.shuffleQuestions()
+	},
 	methods: {
+		shuffleQuestions(){
+			this.questions = this.questions.sort(() => Math.random() - 0.5);
+		},
 		checkscore() {
 			this.scorebox=true
 			let l = this.questions.length;
