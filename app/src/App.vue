@@ -134,7 +134,8 @@ export default {
 		</p>
 
 		<p>
-			I <strong>do not own</strong> the questions, or content in the questions; I do not store or collect this information please see the source code if you are concerned it is <a href="https://github.com/DLCIncluded/MQ" target="_blank">open source</a>. <strong>All processing is done in YOUR browser in memory, no data will ever be sent to me, or anyone else.</strong>
+			I <strong>do not own</strong> the questions, or content in the questions; I do not store or collect this information please see the source code if you are concerned it is <a href="https://github.com/DLCIncluded/MQ" target="_blank">open source</a>. <strong>All processing is done in YOUR browser in memory, no data will ever be sent to me, or anyone else.</strong> 
+			If you have any questions, comments, or suggestions please go to the github repo here and submit an issue, and I will be glad to assist! 
 		</p>
 		<p>
 			All this site is for is to make taking the questionnaire easier, and I was bored, and too lazy to tally up the score myself... and yes I know that making this site was far more work than just doing a bit of adding... 
@@ -174,9 +175,12 @@ export default {
 		</div>
 
 		<div class="score_box" v-show="scorebox">
-			<p>{{score}} / 235</p>
-			<p>{{avg}}</p>
-			<p v-if="avg >= 4.16">
+
+			<p>As a reminder this is an assessment for Monotropism, not Autism. If you score high, please be sure to do further research into Monotropism, more information can be found: <a href="https://monotropism.org/" target="_blank" rel="noopener noreferrer">https://monotropism.org/</a></p>
+			<br>
+			<p>Monotropism Score: {{score}} / 235</p>
+			<p>Average: {{avg}}</p>
+			<!-- <p v-if="avg >= 4.16">
 				Autistic Likely -- disclaimer NOT A DOCTOR
 			</p>
 			<p v-else-if="avg<4.15 && avg>3.7">
@@ -184,14 +188,14 @@ export default {
 			</p>
 			<p v-else>
 				Autism unlikely -- disclaimer NOT A DOCTOR
-			</p>
+			</p> -->
 			<br>
-			<p>Average autistic score: ~4.15 with standard deviation: .347</p>
-			<p>Average allistic score: ~3.19 with standard deviation: .578</p>
+			<!-- <p>Average autistic score: ~4.15 with standard deviation: .347</p>
+			<p>Average allistic score: ~3.19 with standard deviation: .578</p> -->
 
-			<p>If your score falls anywhere to the right of "low" on the chart below, it is possible you fall on the autism spectrum. </p>
+			<!-- <p>If your score falls anywhere to the right of "low" on the chart below, it is possible you fall on the autism spectrum. </p>
 			<div id="slider">
-			</div>
+			</div> -->
 			
 		</div>
 	</div>
