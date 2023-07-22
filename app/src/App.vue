@@ -92,7 +92,8 @@ export default {
 			var allistic_mean = 3.19
 			var allistic_sd = 0.578
 			var allisticpercentile = math.ceil(100*(1 - math.erf((allistic_mean - this.avg ) / (math.sqrt(2) * allistic_sd))) / 2)
-			this.scoreQuote ="This score falls in the "+autismpercentile+"th <a href='https://en.wikipedia.org/wiki/Percentile' target='_blank'>percentile</a> of the autistic population based on data from the initial validation study on the MQ."
+			// this.scoreQuote ="This score falls in the "+autismpercentile+"th <a href='https://en.wikipedia.org/wiki/Percentile' target='_blank'>percentile</a> of the autistic population based on data from the initial validation study on the MQ."
+			this.scoreQuote ="This score means that you are more Monotropic than about "+autismpercentile+"% of autistic people."
 			console.log(this.avg)
 			console.log(this.scoreQuote)
 			
