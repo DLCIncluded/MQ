@@ -1,6 +1,6 @@
 <script>
-// import noUiSlider from 'nouislider';
-// import wNumb from 'wnumb';
+import noUiSlider from 'nouislider';
+import wNumb from 'wnumb';
 import { ref,computed } from 'vue';
 import { RouterLink, RouterView } from 'vue-router';
 import 'nouislider/dist/nouislider.css';
@@ -93,7 +93,7 @@ export default {
 			var allistic_sd = 0.578
 			var allisticpercentile = math.ceil(100*(1 - math.erf((allistic_mean - this.avg ) / (math.sqrt(2) * allistic_sd))) / 2)
 			// this.scoreQuote ="This score falls in the "+autismpercentile+"th <a href='https://en.wikipedia.org/wiki/Percentile' target='_blank'>percentile</a> of the autistic population based on data from the initial validation study on the MQ."
-			this.scoreQuote ="This score means that you are more Monotropic than about "+autismpercentile+"% of autistic people."
+			this.scoreQuote ="This score means that you are more Monotropic than about "+autismpercentile+"% of autistic people and about "+allisticpercentile+"% of allistic people."
 			console.log(this.avg)
 			console.log(this.scoreQuote)
 			
@@ -105,21 +105,26 @@ export default {
 			// if(!slider.noUiSlider){
 			// 	noUiSlider.create(slider, {
 			// 		start: [20,100, 211],
-			// 		connect: [false,false,true, true],
 			// 		tooltips: [
 			// 			{
 			// 				to: function ( value ) {
-			// 				return "<span class='score_slider'>Your Score</span>";
+			// 					if ((value > 190 && value <= 197)||(value > 144 && value <= 155)) 
+			// 						return "<span class='score_slider move_up'>Your Avg="+(value/47).toFixed(2)+"</span>";
+			// 					else if (value < 190 && value >= 155)
+									
+			// 						return "<span class='score_slider'>Your Avg="+(value/47).toFixed(2)+"</span>";
+			// 					else 
+			// 						return "<span class='score_slider'>Your Avg="+(value/47).toFixed(2)+"</span>";
 			// 				}
 			// 			},
 			// 			{
 			// 				to: function ( value ) {
-			// 				return "<span class='under'>Low</span>";
+			// 				return "<span class='under non_slider'>AL=~"+(value/47).toFixed(2)+"</span>";
 			// 				}
 			// 			},
 			// 			{
 			// 				to: function ( value ) {
-			// 				return  "<span class='under'>High</span>";
+			// 				return  "<span class='under aut_slider'>AU=~"+(value/47).toFixed(2)+"</span>";
 			// 				}
 			// 			}
 			// 		],
@@ -127,13 +132,14 @@ export default {
 			// 		range: {
 			// 			'min': 0,
 			// 			'max': 235
-			// 		}
+			// 		},
+
 			// 	});
-			// } 
+		// 	} 
 			
-			// console.log(score)
-			// slider.noUiSlider.set([score,'178', '211']);
-			// slider.noUiSlider.disable();
+		// 	console.log(score)
+		// 	slider.noUiSlider.set([score,'149.93', '195']);
+		// 	slider.noUiSlider.disable();
 		}
 	}
 }
@@ -205,22 +211,15 @@ export default {
 			<p>Average: {{avg}}</p>
 			<br>
 			<p v-html="scoreQuote"></p>
-			<!-- <p v-if="avg >= 4.16">
-				Autistic Likely -- disclaimer NOT A DOCTOR
-			</p>
-			<p v-else-if="avg<4.15 && avg>3.7">
-				Autism possible -- disclaimer NOT A DOCTOR
-			</p>
-			<p v-else>
-				Autism unlikely -- disclaimer NOT A DOCTOR
-			</p> -->
-			<br>
-			<!-- <p>Average autistic score: ~4.15 with standard deviation: .347</p>
-			<p>Average allistic score: ~3.19 with standard deviation: .578</p> -->
 
-			<!-- <p>If your score falls anywhere to the right of "low" on the chart below, it is possible you fall on the autism spectrum. </p>
+			<br>
+
+			<!-- <p>
+				For visual reference, this is your average(blue) compared to the averages of AU(yellow)=autistic people, and AL(purple)=allistic people.
+			</p>
+			
 			<div id="slider">
-			</div> -->
+			</div>  -->
 			
 		</div>
 	</div>
