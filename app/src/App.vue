@@ -159,10 +159,10 @@ export default {
 
     <div class="wrapper">
 	    <h1>Monotropism Questionnaire</h1>
-		<p><strong>BEFORE YOU BEGIN!!! I am not a doctor</strong>. I am a bored webdev who thinks self diagnosing is valid.</p> 
+		<p><strong>BEFORE YOU BEGIN!!! I am not a doctor</strong>. I am a bored webdev who thinks self diagnosing is valid. This is not diagnosing anything, compare your scores to the results of the data from the initial validation study and continue to research. Thank you for the team involved in this study for putting together the questionnaire, and all those who have made suggestions and helped make this app better.</p> 
 		
 		<p>
-			This is not diagnosing anything. Questions taken directly from: <a href="https://osf.io/4wru2" target="_blank">https://osf.io/4wru2</a> and <a href="https://osf.io/g4kc9" target="_blank">scored based on their findings</a>.<br/>
+			Questions taken directly from: <a href="https://osf.io/4wru2" target="_blank">https://osf.io/4wru2</a> and <a href="https://osf.io/g4kc9" target="_blank">scored based on their findings</a>.<br/>
 			Original License info:  This questionnaire is published under a Creative Commons license, CC-BY-NC-SA.  Full text for this license can be found on the Creative Commons website <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank">here</a>. 
 		</p>
 		<p>
