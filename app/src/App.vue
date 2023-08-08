@@ -73,16 +73,23 @@ export default {
 		},
 		checkscore() {
 			this.scorebox=true
+			let num_questions = this.questions.length;
 			let l = this.questions.length;
+			console.log("num questions: "+num_questions)
 			let score = 0;
 			for (var i = 0; i < l; i++) {
-
 				var x = parseInt(this.questions[i].val)
+				if (x === 0) {
+					num_questions=num_questions-1 //lower the number of questions to divide by if they use n/a - fixes #7
+					console.log("N/A choice - decrement num_questions, num_questions="+num_questions)
+				}
 				score = score + x
 			}
+			console.log("final num questions: "+num_questions)
 			this.score = score
-			this.avg = score / 47
+			this.avg = score / num_questions
 			this.avg = this.avg.toFixed(2) //fixes #6
+			console.log("score calc: "+score+ "/" +num_questions+"="+this.avg)
 
 			//percentile math per #4 - user Pi2048 Thank you!
 			var autism_mean = 4.15
@@ -94,8 +101,8 @@ export default {
 			var allisticpercentile = math.ceil(100*(1 - math.erf((allistic_mean - this.avg ) / (math.sqrt(2) * allistic_sd))) / 2)
 			// this.scoreQuote ="This score falls in the "+autismpercentile+"th <a href='https://en.wikipedia.org/wiki/Percentile' target='_blank'>percentile</a> of the autistic population based on data from the initial validation study on the MQ."
 			this.scoreQuote ="This score means that you are more Monotropic than about "+autismpercentile+"% of autistic people and about "+allisticpercentile+"% of allistic people."
-			console.log(this.avg)
-			console.log(this.scoreQuote)
+			// console.log(this.avg)
+			// console.log(this.scoreQuote)
 			
 			//for testing: var btns = document.querySelectorAll('[id$="5"]');for(var i=0;i<btns.length;i++){ btns[i].click(); }
 			
@@ -177,8 +184,8 @@ export default {
 	<div>
 		<div v-for="(item,index) in questions" :key="index">
 			<div class="question">
-				{{item.question}}
-				 <!-- - {{item.val}} -->
+				{{item.question}} 
+				 - {{item.reverse}}
 			</div>
 			
 			<div v-if="!item.reverse" class='selections'>
@@ -208,7 +215,7 @@ export default {
 			<p>As a reminder this is an assessment for Monotropism, not Autism. If you score high, please be sure to do further research into Monotropism, more information can be found: <a href="https://monotropism.org/" target="_blank" rel="noopener noreferrer">https://monotropism.org/</a></p>
 			<br>
 			<p>Monotropism Score: {{score}} / 235</p>
-			<p>Average: {{avg}}</p>
+			<p>Your Average: {{avg}}</p>
 			<br>
 			<p v-html="scoreQuote"></p>
 
