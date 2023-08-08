@@ -185,7 +185,7 @@ export default {
 		<div v-for="(item,index) in questions" :key="index">
 			<div class="question">
 				{{item.question}} 
-				 - {{item.reverse}}
+				 <!-- - {{item.reverse}} -->
 			</div>
 			
 			<div v-if="!item.reverse" class='selections'>
