@@ -100,7 +100,7 @@ export default {
 			var allistic_sd = 0.578
 			var allisticpercentile = math.ceil(100*(1 - math.erf((allistic_mean - this.avg ) / (math.sqrt(2) * allistic_sd))) / 2)
 			// this.scoreQuote ="This score falls in the "+autismpercentile+"th <a href='https://en.wikipedia.org/wiki/Percentile' target='_blank'>percentile</a> of the autistic population based on data from the initial validation study on the MQ."
-			this.scoreQuote ="This score means that you are more Monotropic than about "+autismpercentile+"% of autistic people and about "+allisticpercentile+"% of allistic people."
+			this.scoreQuote ="This score suggests that you are more Monotropic than about "+autismpercentile+"% of autistic people and about "+allisticpercentile+"% of allistic people based on data from the initial validation study."
 			// console.log(this.avg)
 			// console.log(this.scoreQuote)
 			
@@ -166,12 +166,12 @@ export default {
 			Original License info:  This questionnaire is published under a Creative Commons license, CC-BY-NC-SA.  Full text for this license can be found on the Creative Commons website <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank">here</a>. 
 		</p>
 		<p>
-			Original Credit: <a href="https://doi.org/10.17605/OSF.IO/WPX5G" target="_blank"><i>Garau, V., Woods, R., Chown, N., Hallett, S., Murray, F.,Wood, R.,Murray, A.& Fletcher-Watson, S. (2023). The Monotropism Questionnaire, Open Science Framework.</i> </a>
+			Original Credit: <a href="https://doi.org/10.17605/OSF.IO/WPX5G" target="_blank"><i>Garau, V., Woods, R., Chown, N., Hallett, S., Murray, F.,Wood, R.,Murray, A.& Fletcher-Watson, S. (2023). The Monotropism Questionnaire, Open Science Framework. This is a pre-print, meaning it is currently awaiting peer review.</i> </a>
 		</p>
 
 		<p>
 			I <strong>do not own</strong> the questions, or content in the questions; I do not store or collect this information please see the source code if you are concerned it is <a href="https://github.com/DLCIncluded/MQ" target="_blank">open source</a>. <strong>All processing is done in YOUR browser in memory, no data will ever be sent to me, or anyone else.</strong> 
-			If you have any questions, comments, or suggestions please go to the github repo here and submit an issue, and I will be glad to assist! 
+			If you have any questions, comments, or suggestions please go to the github repo <a href="https://github.com/DLCIncluded/MQ" target="_blank">here</a> and submit an issue, and I will be glad to assist! 
 		</p>
 		<p>
 			All this site is for is to make taking the questionnaire easier, and I was bored, and too lazy to tally up the score myself... and yes I know that making this site was far more work than just doing a bit of adding... 
@@ -212,7 +212,7 @@ export default {
 
 		<div class="score_box" v-show="scorebox">
 
-			<p>As a reminder this is an assessment for Monotropism, not Autism. If you score high, please be sure to do further research into Monotropism, more information can be found: <a href="https://monotropism.org/" target="_blank" rel="noopener noreferrer">https://monotropism.org/</a></p>
+			<p>As a reminder this is an assessment for <a href="https://monotropism.org/" target="_blank" rel="noopener noreferrer">Monotropism</a>, a trait sometimes associated with Autism, not Autism directly. If you score high, please be sure to do further research into Monotropism, more information can be found: <a href="https://monotropism.org/" target="_blank" rel="noopener noreferrer">https://monotropism.org/</a></p>
 			<br>
 			<p>Monotropism Score: {{score}} / 235</p>
 			<p>Your Average: {{avg}}</p>
