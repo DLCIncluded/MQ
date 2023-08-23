@@ -18,7 +18,7 @@ export default {
 				{question: "I rarely find simultaneously holding eye contact and making a verbal conversation with another person uncomfortable.",reverse: true, val: 0},
 				{question: "I often notice details that others do not.",reverse: false, val: 0},
 				{question: "Involvement in an activity of interest often reduces my anxiety level.",reverse: false, val: 0},
-				{question: "I find social interactions more comfortable if communicating about atopic of interest to me.",reverse: false, val: 0},
+				{question: "I find social interactions more comfortable if communicating about a topic of interest to me.",reverse: false, val: 0},
 				{question: "I am often totally focused on activities I am passionate about, to the point I am unaware of other events. ",reverse: false, val: 0},
 				{question: "I can get quite good at something even if I'm not especially interested in it.",reverse: true, val: 0},
 				{question: "I often lose sense of time when engaging in activities I am passionate about.",reverse: false, val: 0},
