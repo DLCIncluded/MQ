@@ -225,7 +225,7 @@ export default {
 			
 		<p>
 			If you have trouble finishing in one sitting, and would like to save your progress, please check this box. <br>
-			NOTE: If you check this box, you are agreeing that it is okay to store your progress in your browser (think <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank" rel="noopener noreferrer">cookies</a>), this will only store in your browser's menu until you <a href="https://www.leadshook.com/help/how-to-clear-local-storage-in-google-chrome-browser/" target="_blank" rel="noopener noreferrer">clear local storage</a>, the site still will not collect, or store your data any where else.<br>
+			NOTE: If you check this box, you are agreeing that it is okay to store your progress in your browser (think <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank" rel="noopener noreferrer">cookies</a>), this will only store in your browser's memory until you <a href="https://www.leadshook.com/help/how-to-clear-local-storage-in-google-chrome-browser/" target="_blank" rel="noopener noreferrer">clear local storage</a>, the site still will not collect, or store your data any where else.<br>
 
 
 			<label for="save-progress">Accept and allow saving progress: </label><input type="checkbox" name="saveProgress" id="save-progress" v-model="saveProgress" > 
