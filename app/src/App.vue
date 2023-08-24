@@ -229,14 +229,15 @@ export default {
 
 
 			<label for="save-progress">Accept and allow saving progress: </label><input type="checkbox" name="saveProgress" id="save-progress" v-model="saveProgress" > 
-			<p>
+			<p v-if="saveProgress" class="savedBox">
+
 				<button @click="saveValues" class='button green' :disabled='!saveProgress'>save</button>
 				
 				<button @click="loadValues" class='button blue' :disabled='!saveProgress'>load</button>
 
 				<button class='button red' @click="clearSavedData" :disabled='!saveProgress'>Clear Saved Data</button>
 
-				<span v-if="saveProgress">Saved at: {{savedAt}}</span>
+				<p>Saved at: {{savedAt}}</p>
 				
 			</p>
 			
@@ -337,6 +338,7 @@ strong{
 	margin-top:5em;
 }
 
+
 @media only screen and (max-width: 600px) {
 	.selections {
 		display:flex;
@@ -347,6 +349,14 @@ strong{
 		flex-grow:1;
 		display: flex;
 		flex-direction: row;
+		text-align: center;
+	}
+	.savedBox {
+		display:flex;
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.savedBox p {
 		text-align: center;
 	}
 }
@@ -414,4 +424,6 @@ strong{
   background-color: #298e46;
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
+
+
 </style>
