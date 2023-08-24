@@ -231,9 +231,9 @@ export default {
 			<label for="save-progress">Accept and allow saving progress: </label><input type="checkbox" name="saveProgress" id="save-progress" v-model="saveProgress" > 
 			<p v-if="saveProgress" class="savedBox">
 
-				<button @click="saveValues" class='button green' :disabled='!saveProgress'>save</button>
+				<button @click="saveValues" class='button green' :disabled='!saveProgress'>Save</button>
 				
-				<button @click="loadValues" class='button blue' :disabled='!saveProgress'>load</button>
+				<button @click="loadValues" class='button blue' :disabled='!saveProgress'>Load</button>
 
 				<button class='button red' @click="clearSavedData" :disabled='!saveProgress'>Clear Saved Data</button>
 
