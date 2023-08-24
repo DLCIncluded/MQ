@@ -61,15 +61,61 @@ export default {
 				scorebox: false,
 				score: 0,
 				avg: 0,
-				scoreQuote: ""
+				scoreQuote: "",
+				saveProgress:false,
+				savedAt:'never'
 		}
 	},
-	mounted:function(){
-		this.shuffleQuestions()
+	created:function(){
+		this.loadValues() //Check for and load values if they were saved
+		this.shuffleQuestions() 
 	},
 	methods: {
+		saveValues(){ //save progress in browser memory
+			if(this.saveProgress){
+				localStorage.questions = JSON.stringify(this.questions)
+				localStorage.saveProgress = true
+				console.log("manual save")
+				var today = new Date();
+
+				var date = (today.getMonth()+1)  +'/'+ today.getDate()  +'/'+ today.getFullYear()
+
+				var hours = today.getHours();
+				var minutes = today.getMinutes();
+				var seconds = today.getSeconds();
+				var ampm = hours >= 12 ? 'pm' : 'am';
+				hours = hours % 12;
+				hours = hours ? hours : 12; // the hour '0' should be '12'
+				minutes = minutes < 10 ? '0'+minutes : minutes; //add leading 0 to min/sec
+				seconds = seconds < 10 ? '0'+seconds : seconds;
+				var strTime = hours + ':' + minutes +':'+ seconds + ' ' + ampm;
+
+
+
+				this.savedAt = date +" "+ strTime
+				localStorage.savedAt = this.savedAt
+			}
+		},
+		loadValues(){//if saved, go ahead and load to use, if not use the base questions
+			if(localStorage.saveProgress){
+				this.saveProgress = true
+			}
+			if(localStorage.questions){
+				this.questions = JSON.parse(localStorage.questions)
+			}			
+			if(localStorage.savedAt){
+				this.savedAt = localStorage.savedAt
+			}
+		},
+		clearSavedData(){
+			localStorage.clear()
+			this.saveProgress = false
+			this.savedAt = 'never'
+		},
 		shuffleQuestions(){
-			this.questions = this.questions.sort(() => Math.random() - 0.5);
+			if(!localStorage.questions){ //only shuffle if we're not pullling from stored questions
+				this.questions = this.questions.sort(() => Math.random() - 0.5);
+			}
 		},
 		checkscore() {
 			this.scorebox=true
@@ -81,7 +127,7 @@ export default {
 				var x = parseInt(this.questions[i].val)
 				if (x === 0) {
 					num_questions=num_questions-1 //lower the number of questions to divide by if they use n/a - fixes #7
-					console.log("N/A choice - decrement num_questions, num_questions="+num_questions)
+					// console.log("N/A choice - decrement num_questions, num_questions="+num_questions)
 				}
 				score = score + x
 			}
@@ -177,7 +223,25 @@ export default {
 			All this site is for is to make taking the questionnaire easier, and I was bored, and too lazy to tally up the score myself... and yes I know that making this site was far more work than just doing a bit of adding... 
 		</p>
 			
+		<p>
+			If you have trouble finishing in one sitting, and would like to save your progress, please check this box. <br>
+			NOTE: If you check this box, you are agreeing that it is okay to store your progress in your browser (think <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank" rel="noopener noreferrer">cookies</a>), this will only store in your browser's menu until you <a href="https://www.leadshook.com/help/how-to-clear-local-storage-in-google-chrome-browser/" target="_blank" rel="noopener noreferrer">clear local storage</a>, the site still will not collect, or store your data any where else.<br>
 
+
+			<label for="save-progress">Accept and allow saving progress: </label><input type="checkbox" name="saveProgress" id="save-progress" v-model="saveProgress" > 
+			<p>
+				<button @click="saveValues" class='button green' :disabled='!saveProgress'>save</button>
+				
+				<button @click="loadValues" class='button blue' :disabled='!saveProgress'>load</button>
+
+				<button class='button red' @click="clearSavedData" :disabled='!saveProgress'>Clear Saved Data</button>
+
+				<span v-if="saveProgress">Saved at: {{savedAt}}</span>
+				
+			</p>
+			
+			
+		</p>
     </div>
   </header>
 
@@ -189,20 +253,20 @@ export default {
 			</div>
 			
 			<div v-if="!item.reverse" class='selections'>
-				<p><input type="radio" :name="index" :id="'r'+index+'0'" v-model="item.val" value="0"><label :for="'r'+index+'0'">N/A</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'1'" v-model="item.val" value="1"><label :for="'r'+index+'1'">Strongly Disagree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'2'" v-model="item.val" value="2"><label :for="'r'+index+'2'">Disagree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'3'" v-model="item.val" value="3"><label :for="'r'+index+'3'">Neither Agree or Disagree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'4'" v-model="item.val" value="4"><label :for="'r'+index+'4'">Agree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'5'" v-model="item.val" value="5"><label :for="'r'+index+'5'">Strongly Agree</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'0'" v-model="item.val" value="0" :checked="item.val == '0'"><label :for="'r'+index+'0'">N/A</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'1'" v-model="item.val" value="1" :checked="item.val == '1'"><label :for="'r'+index+'1'">Strongly Disagree</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'2'" v-model="item.val" value="2" :checked="item.val == '2'"><label :for="'r'+index+'2'">Disagree</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'3'" v-model="item.val" value="3" :checked="item.val == '3'"><label :for="'r'+index+'3'">Neither Agree or Disagree</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'4'" v-model="item.val" value="4" :checked="item.val == '4'"><label :for="'r'+index+'4'">Agree</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'5'" v-model="item.val" value="5" :checked="item.val == '5'"><label :for="'r'+index+'5'">Strongly Agree</label></p>
 			</div>
 			<div v-else class='selections'>
-				<p><input type="radio" :name="index" :id="'r'+index+'0'" v-model="item.val" value="0"><label :for="'r'+index+'0'">N/A</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'1'" v-model="item.val" value="5"><label :for="'r'+index+'1'">Strongly Disagree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'2'" v-model="item.val" value="4"><label :for="'r'+index+'2'">Disagree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'3'" v-model="item.val" value="3"><label :for="'r'+index+'3'">Neither Agree or Disagree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'4'" v-model="item.val" value="2"><label :for="'r'+index+'4'">Agree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'5'" v-model="item.val" value="1"><label :for="'r'+index+'5'">Strongly Agree</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'0'" v-model="item.val" value="0" :checked="item.val == '0'"><label :for="'r'+index+'0'">N/A</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'1'" v-model="item.val" value="5" :checked="item.val == '5'"><label :for="'r'+index+'1'">Strongly Disagree</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'2'" v-model="item.val" value="4" :checked="item.val == '4'"><label :for="'r'+index+'2'">Disagree</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'3'" v-model="item.val" value="3" :checked="item.val == '3'"><label :for="'r'+index+'3'">Neither Agree or Disagree</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'4'" v-model="item.val" value="2" :checked="item.val == '2'"><label :for="'r'+index+'4'">Agree</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'5'" v-model="item.val" value="1" :checked="item.val == '1'"><label :for="'r'+index+'5'">Strongly Agree</label></p>
 			</div>
 		</div>
 		
@@ -285,5 +349,69 @@ strong{
 		flex-direction: row;
 		text-align: center;
 	}
+}
+
+/* CSS */
+.button {
+  appearance: none;
+  
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin:1em;
+}
+.button.green{
+	background-color: #2ea44f;
+}
+.button.red{
+	background-color: #FF4742;
+}
+.button.blue{
+	background-color: #0276FF;
+}
+
+.button:hover {
+  /* background-color: rgba(44, 151, 75,.5); */
+  filter: brightness(0.8);
+}
+
+.button:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.button:disabled {
+  /* background-color: #94d3a2; */
+  opacity: .5;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
 </style>
