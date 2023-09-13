@@ -38,12 +38,12 @@ export default {
 				{question: "I have trouble filtering out sounds when I am not doing something I'm focused on. ",reverse: false, val: 0},
 				{question: "I usually mean what I say and no more than that.",reverse: false, val: 0},
 				{question: "I often engage in lengthy discussions on topics I find interesting even though my conversational partner(s) do not. ",reverse: false, val: 0},
-				{question: "I sometimes accidentally say something others find offensive/ rude when I am focused on a task. ",reverse: false, val: 0},
+				{question: "I sometimes accidentally say something others find offensive/rude when I am focused on a task. ",reverse: false, val: 0},
 				{question: "I can sometimes be very distressed by a topic that others think of as trivial. ",reverse: false, val: 0},
 				{question: "I find it easy to keep up with group discussions where everyone is speaking.",reverse: true, val: 0},
 				{question: "Often when I am focused on activities, I do not notice I am thirsty or hungry. ",reverse: false, val: 0},
 				{question: "Often when I am focused on activities, I do not notice I need the bathroom. ",reverse: false, val: 0},
-				{question: "When there is a lot of information to consider, I often struggle to make adecision.  ",reverse: false, val: 0},
+				{question: "When there is a lot of information to consider, I often struggle to make a decision.  ",reverse: false, val: 0},
 				{question: "Sometimes making a decision is so hard I get physically stuck.  ",reverse: false, val: 0},
 				{question: "I sometimes focus on an incident for a substantial time (days) after the event.",reverse: false, val: 0},
 				{question: "I sometimes become highly anxious by focusing on the many possible situations that might occur at a future event.",reverse: false, val: 0},
@@ -205,7 +205,7 @@ export default {
 
     <div class="wrapper">
 	    <h1>Monotropism Questionnaire</h1>
-		<p><strong>BEFORE YOU BEGIN!!! I am not a doctor</strong>. I am a bored webdev who thinks self diagnosing is valid. This is not diagnosing anything, compare your scores to the results of the data from the initial validation study and continue to research. Thank you for the team involved in this study for putting together the questionnaire, and all those who have made suggestions and helped make this app better.</p> 
+		<p><strong>BEFORE YOU BEGIN!!! I am not a doctor</strong>. I am a bored webdev who thinks self-diagnosing is valid. This is not diagnosing anything; compare your scores to the results of the data from the initial validation study and continue to research. Thank you for the team involved in this study for putting together the questionnaire, and all those who have made suggestions and helped make this app better.</p> 
 		
 		<p>
 			Questions taken directly from: <a href="https://osf.io/4wru2" target="_blank">https://osf.io/4wru2</a> and <a href="https://osf.io/g4kc9" target="_blank">scored based on their findings</a>.<br/>
@@ -216,7 +216,7 @@ export default {
 		</p>
 
 		<p>
-			I <strong>do not own</strong> the questions, or content in the questions; I do not store or collect this information please see the source code if you are concerned it is <a href="https://github.com/DLCIncluded/MQ" target="_blank">open source</a>. <strong>All processing is done in YOUR browser in memory, no data will ever be sent to me, or anyone else.</strong> 
+			I <strong>do not own</strong> the questions, or content in the questions; I do not store or collect this information; please see the source code if you are concerned, it is <a href="https://github.com/DLCIncluded/MQ" target="_blank">open source</a>. <strong>All processing is done in <em>your</em> browser, in memory. No data will ever be sent to me, or anyone else.</strong> 
 			If you have any questions, comments, or suggestions please go to the github repo <a href="https://github.com/DLCIncluded/MQ" target="_blank">here</a> and submit an issue, and I will be glad to assist! 
 		</p>
 		<p>
