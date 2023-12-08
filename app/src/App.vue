@@ -27,7 +27,7 @@ export default {
 				{question: "I rarely find social situations chaotic.",reverse: true, val: 0},
 				{question: "I don't mind if someone interrupts me when I'm in the middle of an activity.",reverse: true, val: 0},
 				{question: "When I'm working on something, I'm open to helpful suggestions.",reverse: true, val: 0},
-				{question: "I often find it difficult to switch topics after engaging in an activity for a longtime.",reverse: false, val: 0},
+				{question: "I often find it difficult to switch topics after engaging in an activity for a long time.",reverse: false, val: 0},
 				{question: "I often engage in activities I am passionate about to escape from anxiety.",reverse: false, val: 0},
 				{question: "Routines provide an important source of stability and safety.",reverse: false, val: 0},
 				{question: "I manage uncertainty by creating routines.",reverse: false, val: 0},
