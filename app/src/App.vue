@@ -63,7 +63,8 @@ export default {
 				avg: 0,
 				scoreQuote: "",
 				saveProgress:false,
-				savedAt:'never'
+				savedAt:'never',
+				knav:false
 		}
 	},
 	created:function(){
@@ -243,6 +244,15 @@ export default {
 			
 			
 		</p>
+		<p>
+			<a @click.prevent="knav= !knav" class="pointer">Keyboard Navigation Info</a>
+			<ul v-if="knav">
+				<li>Jump to the next or previous question using <strong>Tab</strong> or <strong>Shift+Tab</strong>.</li>
+				<li>Select your answer using the arrow keys.</li>
+				<li>To Submit - Either <strong>Enter</strong> or Select the button and <strong>Space Bar</strong></li>
+			</ul>
+			
+		</p>
     </div>
   </header>
 
@@ -329,6 +339,9 @@ export default {
 .submit>button:hover{
 	background-color: aquamarine;
 
+	cursor: pointer;
+}
+.pointer {
 	cursor: pointer;
 }
 strong{
