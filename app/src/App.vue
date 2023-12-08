@@ -282,10 +282,14 @@ export default {
 			<p>Monotropism Score: {{score}} / 235</p>
 			<p>Your Average: {{avg}}</p>
 			<br>
-			<p v-html="scoreQuote"></p>
-
+			
+			<p v-if="avg>=3.91">
+				<a href='htt`ps://monotropism.org/im-monotropic-now-what/'>I'm Monotropic, Now What?</a>
+			</p>
 			<br>
-
+			<p v-html="scoreQuote"></p>
+			
+			
 			<!-- <p>
 				For visual reference, this is your average(blue) compared to the averages of AU(yellow)=autistic people, and AL(purple)=allistic people.
 			</p>
