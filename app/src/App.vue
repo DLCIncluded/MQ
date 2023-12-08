@@ -294,7 +294,7 @@ export default {
 			<br>
 			
 			<p v-if="avg>=3.91">
-				<a href='htt`ps://monotropism.org/im-monotropic-now-what/'>I'm Monotropic, Now What?</a>
+				<a href='https://monotropism.org/im-monotropic-now-what/'>I'm Monotropic, Now What?</a>
 			</p>
 			<br>
 			<p v-html="scoreQuote"></p>
