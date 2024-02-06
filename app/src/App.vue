@@ -6,66 +6,27 @@ import { RouterLink, RouterView } from 'vue-router';
 import 'nouislider/dist/nouislider.css';
 import { create, all } from "mathjs";
 const math = create(all);
+import questions from "./questions.json"
 export default {
 	data() {
 		return {
 			lang: "en",
-			questions : [
-				{question: {en:"After a period of instability, I need a quiet and predictable environment.",pt:"Após um período de instabilidade, preciso de um ambiente calmo e previsível."},reverse: false, val: 0},
-				{question: {en:"I need a quiet and predictable environment for me to switch from one task to another easily.",pt:"Preciso de um ambiente calmo e previsível para poder passar facilmente de uma tarefa para outra."},reverse: false, val: 0},
-				{question: {en:"I often struggle to concentrate in busy and/or unpredictable environments.",pt:"Tenho frequentemente dificuldade em concentrar-me em ambientes movimentados e/ou imprevisíveis."},reverse: false, val: 0},
-				{question: {en:"I find sudden unexpected disruptions to my attention startling.",pt:"As interrupções súbitas e inesperadas da minha atenção assustam-me."},reverse: false, val: 0},
-				{question: {en:"It's distressing to be unexpectedly pulled away from something I'm engaged in.",pt:"É angustiante ser inesperadamente afastado de algo em que estou empenhado."},reverse: false, val: 0},
-				{question: {en:"I rarely find simultaneously holding eye contact and making a verbal conversation with another person uncomfortable.",pt:"Raramente me sinto desconfortável por manter simultaneamente o contacto visual e manter uma conversa verbal com outra pessoa."},reverse: true, val: 0},
-				{question: {en:"I often notice details that others do not.",pt:"Reparo frequentemente em pormenores que os outros não reparam."},reverse: false, val: 0},
-				{question: {en:"Involvement in an activity of interest often reduces my anxiety level.",pt:"O envolvimento numa atividade de interesse reduz frequentemente o meu nível de ansiedade."},reverse: false, val: 0},
-				{question: {en:"I find social interactions more comfortable if communicating about a topic of interest to me.",pt:"Considero as interacções sociais mais confortáveis, se comunicar sobre um tópico do meu interesse."},reverse: false, val: 0},
-				{question: {en:"I am often totally focused on activities I am passionate about, to the point I am unaware of other events.",pt:"Muitas vezes estou totalmente concentrado em atividades que me apaixonam, ao ponto de não me aperceber de outros acontecimentos. "},reverse: false, val: 0},
-				{question: {en:"I can get quite good at something even if I'm not especially interested in it.",pt:"Posso tornar-me bastante bom em alguma coisa, mesmo que não esteja especialmente interessado nela."},reverse: true, val: 0},
-				{question: {en:"I often lose sense of time when engaging in activities I am passionate about.",pt:"Perco frequentemente a noção do tempo quando estou envolvido em atividades que me apaixonam."},reverse: false, val: 0},
-				{question: {en:"I sometimes avoid talking because I cannot reliably predict how others will react, especially strangers.",pt:"Por vezes evito falar porque não consigo prever com fiabilidade a reação dos outros, especialmente dos estranhos."},reverse: false, val: 0},
-				{question: {en:"I tend to do activities because I find them interesting, instead of due to societal expectations.",pt:"Normalmente, faço atividades porque as acho interessantes, e não devido às expectativas sociais."},reverse: false, val: 0},
-				{question: {en:"I rarely find social situations chaotic.",pt:"Raramente considero as situações sociais caóticas."},reverse: true, val: 0},
-				{question: {en:"I don't mind if someone interrupts me when I'm in the middle of an activity.",pt:"Não me importo que alguém me interrompa quando estou a meio de uma atividade."},reverse: true, val: 0},
-				{question: {en:"When I'm working on something, I'm open to helpful suggestions.",pt:"Quando estou a trabalhar em algo, estou aberto a sugestões úteis."},reverse: true, val: 0},
-				{question: {en:"I often find it difficult to switch topics after engaging in an activity for a long time.",pt:"Muitas vezes tenho dificuldade em mudar de assunto depois de me envolver numa atividade durante muito tempo."},reverse: false, val: 0},
-				{question: {en:"I often engage in activities I am passionate about to escape from anxiety.",pt:"Muitas vezes, envolvo-me em atividades que me apaixonam para fugir à ansiedade."},reverse: false, val: 0},
-				{question: {en:"Routines provide an important source of stability and safety.",pt:"As rotinas são uma fonte importante de estabilidade e segurança."},reverse: false, val: 0},
-				{question: {en:"I manage uncertainty by creating routines.",pt:"Eu controlo a incerteza criando rotinas."},reverse: false, val: 0},
-				{question: {en:"I often experience anxiety over matters I have little certainty over.",pt:"Sinto-me frequentemente ansioso em relação a assuntos sobre os quais tenho poucas certezas."},reverse: false, val: 0},
-				{question: {en:"I find it difficult to engage in a task of no interest to me even if it is important.",pt:"Tenho dificuldade em dedicar-me a uma tarefa que não me interessa, mesmo que seja importante."},reverse: false, val: 0},
-				{question: {en:"I often find engaging in stimming (e.g.,fidgeting, rocking) to be relaxing.",pt:"Muitas vezes, considero relaxante o facto de me envolver em estímulos (por exemplo, mexer-me, balançar)."},reverse: false, val: 0},
-				{question: {en:"I am usually passionate about a few topics at any one time in my life.",pt:"Normalmente, apaixono-me por um pequeno número de temas de cada vez, nos vários momentos da minha vida."},reverse: false, val: 0},
-				{question: {en:"I have trouble filtering out sounds when I am not doing something I'm focused on.",pt:"Tenho dificuldade em filtrar os sons quando estou a fazer algo em que não estou focado."},reverse: false, val: 0},
-				{question: {en:"I usually mean what I say and no more than that.",pt:"Normalmente, quero dizer  aquilo que disse, e não mais do que isso."},reverse: false, val: 0},
-				{question: {en:"I often engage in lengthy discussions on topics I find interesting even though my conversational partner(s) do not.",pt:"Muitas vezes, discorro longamente sobre temas que considero interessantes, mesmo que não sejam do interesse do(s) meu(s) interlocutor(es)."},reverse: false, val: 0},
-				{question: {en:"I sometimes accidentally say something others find offensive/rude when I am focused on a task.",pt:"Por vezes, quando estou concentrado numa tarefa, digo acidentalmente algo que os outros consideram ofensivo/rude."},reverse: false, val: 0},
-				{question: {en:"I can sometimes be very distressed by a topic that others think of as trivial.",pt:"Posso, por vezes, ficar muito stressado com um assunto que os outros consideram trivial."},reverse: false, val: 0},
-				{question: {en:"I find it easy to keep up with group discussions where everyone is speaking.",pt:"Tenho facilidade em acompanhar discussões em grupo em que todos estão a falar."},reverse: true, val: 0},
-				{question: {en:"Often when I am focused on activities, I do not notice I am thirsty or hungry.",pt:"Muitas vezes, quando estou concentrado em atividades, não me apercebo que tenho sede ou fome."},reverse: false, val: 0},
-				{question: {en:"Often when I am focused on activities, I do not notice I need the bathroom.",pt:"Muitas vezes, quando estou concentrado nas atividades, não me apercebo que preciso de ir à casa de banho."},reverse: false, val: 0},
-				{question: {en:"When there is a lot of information to consider, I often struggle to make a decision. ",pt:"Quando há muita informação para considerar,  tenho muitas vezes dificuldade em tomar uma decisão."},reverse: false, val: 0},
-				{question: {en:"Sometimes making a decision is so hard I get physically stuck. ",pt:"Por vezes, é tão difícil tomar uma decisão que fico fisicamente bloqueado."},reverse: false, val: 0},
-				{question: {en:"I sometimes focus on an incident for a substantial time (days) after the event.",pt:"Por vezes, mantenho-me focado num incidente, muito tempo (dias) após o mesmo ter ocorrido."},reverse: false, val: 0},
-				{question: {en:"I sometimes become highly anxious by focusing on the many possible situations that might occur at a future event.",pt:"Por vezes, fico muito ansioso ao focar-me nas várias situações possíveis que podem decorrer de um acontecimento futuro."},reverse: false, val: 0},
-				{question: {en:"Sometimes when I am focused on an activity, I do not recall all the information I might need to make good decisions.",pt:"Por vezes, quando estou concentrado numa atividade, não me lembro de toda a informação de que preciso para tomar boas decisões."},reverse: false, val: 0},
-				{question: {en:"People tell me I get fixated on things.",pt:"As pessoas dizem-me que fico fixado nas coisas."},reverse: false, val: 0},
-				{question: {en:"I find a problem I can't solve distressing and/or hard to put down.",pt:"Considero que um problema que não consigo resolver é angustiante e/ou difícil de largar."},reverse: false, val: 0},
-				{question: {en:"I tend to feel quite self-conscious unless I'm deeply absorbed in a task. ",pt:"Costumo sentir-me bastante consciente de mim próprio, a menos que esteja profundamente absorvido numa tarefa."},reverse: false, val: 0},
-				{question: {en:"I often get stuck thinking about all the possibilities that might come out of a decision.",pt:"Fico frequentemente bloqueado a pensar em todas as possibilidades que podem resultar de uma decisão."},reverse: false, val: 0},
-				{question: {en:"When I am interested in something, I tend to be passionate about it.",pt:"Quando estou interessado em alguma coisa, tenho tendência a apaixonar-me por ela."},reverse: false, val: 0},
-				{question: {en:"When I am interested in a topic, I like to learn everything I can about that topic. ",pt:"Quando me interesso por um tema, gosto de aprender tudo o que posso sobre o mesmo."},reverse: false, val: 0},
-				{question: {en:"I am still fascinated by many of the things I was interested in when I was much younger.",pt:"Continuo a sentir-me fascinado por muitas das coisas que me interessavam quando era muito mais novo."},reverse: false, val: 0},
-				{question: {en:"I rarely find myself getting stuck in loops of thought.",pt:"Raramente dou comigo mesmo preso em pensamentos circulares."},reverse: true, val: 0},
-				{question: {en:"I often loop back to previous thoughts.",pt:"Volto frequentemente a pensamentos anteriores."},reverse: false,val: 0}
-				],
-				scorebox: false,
-				score: 0,
-				avg: 0,
-				scoreQuote: "",
-				saveProgress:false,
-				savedAt:'never',
-				knav:false
+			questions : questions,
+			answers:{
+					na: {en:"N/A",pt:"Nao aplicave"},
+					sd: {en:"Strongly Disagree",pt:"Discordo totalmente"},
+					d: {en:"Disagree",pt: "Discordo"},
+					nad: {en:"Neither Agree or Disagree",pt: "Nem concordo nem discordo"},
+					a: {en:"Agree",pt: "Concordo"},
+					sa: {en:"Strongly Agree",pt: "Concordo totalmente"}
+			},
+			scorebox: false,
+			score: 0,
+			avg: 0,
+			scoreQuote: "",
+			saveProgress:false,
+			savedAt:'never',
+			knav:false
 		}
 	},
 	created:function(){
@@ -257,7 +218,7 @@ export default {
 		<div>
 		
 			<div class='translations'>
-				Community Translations:
+				Community Translations <a href='https://github.com/DLCIncluded/MQ/wiki/Community-Translations' target='_blank'>ℹ️</a>:
 				<ul>
 					<li><input type="radio" name="lang" id="lang-en" v-model="lang" value="en"><label for="lang-en">EN</label></li>
 					<li><input type="radio" name="lang" id="lang-pt" v-model="lang" value="pt"><label for="lang-pt">PT</label></li>
@@ -272,32 +233,28 @@ export default {
 		<h2 class="qtitle">Questionnaire:</h2>
 		<div v-for="(item,index) in questions" :key="index">
 			<div class="question">
-				<span v-if="this.lang=='en'">
-					{{item.question.en}} 
-				</span>
-				<span v-if="this.lang=='pt'">
-					{{item.question.pt}} 
-				</span>
-				
-				 <!-- - {{item.reverse}} -->
+				<!-- {{ index+1 }}) -->
+				{{item.question[lang]}} 
+
 			</div>
 			
 			<div v-if="!item.reverse" class='selections'>
-				<p><input type="radio" :name="index" :id="'r'+index+'0'" v-model="item.val" value="0" :checked="item.val == '0'"><label :for="'r'+index+'0'">N/A</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'1'" v-model="item.val" value="1" :checked="item.val == '1'"><label :for="'r'+index+'1'">Strongly Disagree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'2'" v-model="item.val" value="2" :checked="item.val == '2'"><label :for="'r'+index+'2'">Disagree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'3'" v-model="item.val" value="3" :checked="item.val == '3'"><label :for="'r'+index+'3'">Neither Agree or Disagree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'4'" v-model="item.val" value="4" :checked="item.val == '4'"><label :for="'r'+index+'4'">Agree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'5'" v-model="item.val" value="5" :checked="item.val == '5'"><label :for="'r'+index+'5'">Strongly Agree</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'0'" v-model="item.val" value="0" :checked="item.val == '0'"><label :for="'r'+index+'0'">{{answers.na[lang]}}</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'1'" v-model="item.val" value="1" :checked="item.val == '1'"><label :for="'r'+index+'1'">{{answers.sd[lang]}}</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'2'" v-model="item.val" value="2" :checked="item.val == '2'"><label :for="'r'+index+'2'">{{answers.d[lang]}}</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'3'" v-model="item.val" value="3" :checked="item.val == '3'"><label :for="'r'+index+'3'">{{answers.nad[lang]}}</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'4'" v-model="item.val" value="4" :checked="item.val == '4'"><label :for="'r'+index+'4'">{{answers.a[lang]}}</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'5'" v-model="item.val" value="5" :checked="item.val == '5'"><label :for="'r'+index+'5'">{{answers.sa[lang]}}</label></p>
 			</div>
 			<div v-else class='selections'>
-				<p><input type="radio" :name="index" :id="'r'+index+'0'" v-model="item.val" value="0" :checked="item.val == '0'"><label :for="'r'+index+'0'">N/A</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'1'" v-model="item.val" value="5" :checked="item.val == '5'"><label :for="'r'+index+'1'">Strongly Disagree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'2'" v-model="item.val" value="4" :checked="item.val == '4'"><label :for="'r'+index+'2'">Disagree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'3'" v-model="item.val" value="3" :checked="item.val == '3'"><label :for="'r'+index+'3'">Neither Agree or Disagree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'4'" v-model="item.val" value="2" :checked="item.val == '2'"><label :for="'r'+index+'4'">Agree</label></p>
-				<p><input type="radio" :name="index" :id="'r'+index+'5'" v-model="item.val" value="1" :checked="item.val == '1'"><label :for="'r'+index+'5'">Strongly Agree</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'0'" v-model="item.val" value="0" :checked="item.val == '0'"><label :for="'r'+index+'0'">{{answers.na[lang]}}</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'1'" v-model="item.val" value="5" :checked="item.val == '5'"><label :for="'r'+index+'1'">{{answers.sd[lang]}}</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'2'" v-model="item.val" value="4" :checked="item.val == '4'"><label :for="'r'+index+'2'">{{answers.d[lang]}}</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'3'" v-model="item.val" value="3" :checked="item.val == '3'"><label :for="'r'+index+'3'">{{answers.nad[lang]}}</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'4'" v-model="item.val" value="2" :checked="item.val == '2'"><label :for="'r'+index+'4'">{{answers.a[lang]}}</label></p>
+				<p><input type="radio" :name="index" :id="'r'+index+'5'" v-model="item.val" value="1" :checked="item.val == '1'"><label :for="'r'+index+'5'">{{answers.sa[lang]}}</label></p>
 			</div>
+			
 		</div>
 		
 		<div class="submit">
