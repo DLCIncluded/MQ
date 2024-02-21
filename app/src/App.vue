@@ -41,6 +41,8 @@ export default {
 			savedAt:'never',
 			knav:false,
 			progress: 0,
+			point1: { x: 251, y: 337 }, 
+			point5: { x: 1352, y: 337 },
 		}
 	},
 	created:function(){
@@ -138,6 +140,11 @@ export default {
 			var allisticpercentile = math.ceil(100*(1 - math.erf((allistic_mean - this.avg ) / (math.sqrt(2) * allistic_sd))) / 2)
 			// this.scoreQuote ="This score falls in the "+autismpercentile+"th <a href='https://en.wikipedia.org/wiki/Percentile' target='_blank'>percentile</a> of the autistic population based on data from the initial validation study on the MQ."
 			this.scoreQuote ="This score suggests that you are more Monotropic than about "+autismpercentile+"% of autistic people and about "+allisticpercentile+"% of allistic people based on data from the initial validation study."
+
+			setTimeout(() => {
+				this.drawArrow()
+			}, 100);
+			
 			// console.log(this.avg)
 			// console.log(this.scoreQuote)
 			
@@ -188,7 +195,55 @@ export default {
 		updateProgress() {
 			this.progress = this.completedQuestions;
 
-		}
+		},
+		calculateScorePosition() {
+			const scoreRatio = (this.avg -1) /4; // Normalize score to range 0-1
+
+			const x = this.point1.x + (this.point5.x - this.point1.x) * scoreRatio;
+			const y = this.point1.y + (this.point5.y - this.point1.y) * scoreRatio;
+			return { x, y };
+		},
+		drawArrow() {
+			console.log("draw dot")
+			const image = this.$refs.image;
+			const arrow = this.$refs.arrow;
+
+			const { scaleX, scaleY } = this.getScaleFactors(image);
+
+			const scaledPoint1 = {
+				x: this.point1.x * scaleX,
+				y: this.point1.y * scaleY,
+			};
+
+			const scaledPoint5 = {
+				x: this.point5.x * scaleX,
+				y: this.point5.y * scaleY,
+			};
+
+			const scorePosition = this.calculateScorePosition(scaledPoint1, scaledPoint5);
+
+			arrow.style.left = `${scorePosition.x}px`;
+			arrow.style.top = `${scorePosition.y}px`;
+		},
+		getScaleFactors(image) {
+			const naturalWidth = image.naturalWidth;
+			const naturalHeight = image.naturalHeight;
+			const clientWidth = image.clientWidth;
+			const clientHeight = image.clientHeight;
+
+			const scaleX = clientWidth / naturalWidth;
+			const scaleY = clientHeight / naturalHeight;
+
+			return { scaleX, scaleY };
+		},
+		calculateScorePosition(scaledPoint1, scaledPoint5) {
+			const scoreRatio = (this.avg - 1) / 4;
+
+			const scoreX = scaledPoint1.x + scoreRatio * (scaledPoint5.x - scaledPoint1.x);
+			const scoreY = scaledPoint1.y + scoreRatio * (scaledPoint5.y - scaledPoint1.y);
+
+			return { x: scoreX, y: scoreY };
+		},
 	},
 	computed: {
 		completedQuestions() {
@@ -196,7 +251,13 @@ export default {
 		},
 		progressWidth() {
 			return `${(this.progress / this.questions.length) * 100}%`;
-		}
+		},
+	},
+	mounted() {
+		window.addEventListener('resize', this.drawArrow);
+	},
+	beforeDestroy() {
+		window.removeEventListener('resize', this.handleResize);
 	},
 
 }
@@ -319,6 +380,12 @@ export default {
 			</p>
 			<br>
 			<p v-html="scoreQuote"></p>
+			<br>
+			<p>For visual reference based on the original study, the arrow points to where you would fall on their chart:</p>
+			<div style="position:relative">
+				<img ref="image" src="./assets/mq.png" alt="Scale Image" style="width: 100%" @load="drawArrow">
+				<div ref="arrow" class="arrow"><i class="gg-arrow-long-up-c"></i></div>
+			</div>
 			
 			
 			<!-- <p>
@@ -405,6 +472,14 @@ strong{
 	}
 	.savedBox p {
 		text-align: center;
+	}
+	.arrow {
+		position: absolute;
+		transform: translate(-50%, -80%)!important;
+	}
+
+	.gg-arrow-long-up-c {
+		transform: scale(1,.8) !important;
 	}
 }
 
@@ -493,5 +568,48 @@ strong{
 	left: 0;
 	bottom:0;
 	height: 1rem;
+}
+
+.arrow {
+  position: absolute;
+  transform: translate(-50%, -150%);
+}
+
+.gg-arrow-long-up-c {
+	color:#8803fc;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(3);
+    border-right: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-bottom: 4px solid transparent;
+    box-shadow: inset 0 0 0 2px;
+    height: 24px;
+    width: 6px
+}
+.gg-arrow-long-up-c::after,
+.gg-arrow-long-up-c::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute
+}
+.gg-arrow-long-up-c::after {
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    top: 0;
+    left: -2px
+}
+.gg-arrow-long-up-c::before {
+    width: 6px;
+    height: 6px;
+    border: 2px solid;
+    border-radius: 8px;
+    bottom: -4px;
+    left: -2px
 }
 </style>
