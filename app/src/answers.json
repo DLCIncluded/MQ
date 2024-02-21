@@ -1,0 +1,38 @@
+{
+	"na": {
+	  "en": "N/A",
+	  "pt": "Nao aplicave",
+	  "de": "keine Antwort",
+	  "pl": "bez odpowiedzi"
+	},
+	"sd": {
+	  "en": "Strongly Disagree",
+	  "pt": "Discordo totalmente",
+	  "de": "Stimme voll und ganz zu",
+	  "pl": "Zdecydowanie się zgadzam "
+	},
+	"d": {
+	  "en": "Disagree",
+	  "pt": "Discordo",
+	  "de": "Stimme zu",
+	  "pl": "Zgadzam się"
+	},
+	"nad": {
+	  "en": "Neither Agree or Disagree",
+	  "pt": "Nem concordo nem discordo",
+	  "de": "Stimme weder zu noch lehne ich ab",
+	  "pl": "Trudno powiedzieć"
+	},
+	"a": {
+	  "en": "Agree",
+	  "pt": "Concordo",
+	  "de": "Stimme nicht zu",
+	  "pl": "Nie zgadzam się"
+	},
+	"sa": {
+	  "en": "Strongly Agree",
+	  "pt": "Concordo totalmente",
+	  "de": "Stimme überhaupt nicht zu",
+	  "pl": "Zdecydowanie się nie zgadzam"
+	}
+  }

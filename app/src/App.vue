@@ -7,19 +7,31 @@ import 'nouislider/dist/nouislider.css';
 import { create, all } from "mathjs";
 const math = create(all);
 import questions from "./questions.json"
+import answers from "./answers.json"
 export default {
 	data() {
 		return {
 			lang: "en",
+			lang_options: [
+				{ 
+					"short": "en",
+					"display": "English"
+				},
+				{ 
+					"short": "pt",
+					"display": "Portuguese"
+				},
+				{ 
+					"short": "de",
+					"display": "German"
+				},
+				{ 
+					"short": "pl",
+					"display": "Polish"
+				},
+			],
 			questions : questions,
-			answers:{
-					na: {en:"N/A",pt:"Nao aplicave"},
-					sd: {en:"Strongly Disagree",pt:"Discordo totalmente"},
-					d: {en:"Disagree",pt: "Discordo"},
-					nad: {en:"Neither Agree or Disagree",pt: "Nem concordo nem discordo"},
-					a: {en:"Agree",pt: "Concordo"},
-					sa: {en:"Strongly Agree",pt: "Concordo totalmente"}
-			},
+			answers:answers,
 			scorebox: false,
 			score: 0,
 			avg: 0,
@@ -219,10 +231,15 @@ export default {
 		
 			<div class='translations'>
 				Community Translations <a href='https://github.com/DLCIncluded/MQ/wiki/Community-Translations' target='_blank'>ℹ️</a>:
-				<ul>
-					<li><input type="radio" name="lang" id="lang-en" v-model="lang" value="en"><label for="lang-en">EN</label></li>
-					<li><input type="radio" name="lang" id="lang-pt" v-model="lang" value="pt"><label for="lang-pt">PT</label></li>
-				</ul>		
+				<!-- <ul>
+					<li v-for="(l,index) in lang_options" :key="index">
+						<input type="radio" name="lang" :id="'lang-'+l.short" v-model="lang" :value="l.short">
+						<label class="lang" :for="'lang-'+l.short">{{l.display}}</label>
+					</li>
+				</ul>		 -->
+				<select name="lang" id="lang" v-model="lang">
+					<option v-for="(l,index) in lang_options" :key="index" :value="l.short">{{l.display}}</option>
+				</select>
 			</div>
 		</div>
     </div>
@@ -237,7 +254,6 @@ export default {
 				{{item.question[lang]}} 
 
 			</div>
-			
 			<div v-if="!item.reverse" class='selections'>
 				<p><input type="radio" :name="index" :id="'r'+index+'0'" v-model="item.val" value="0" :checked="item.val == '0'"><label :for="'r'+index+'0'">{{answers.na[lang]}}</label></p>
 				<p><input type="radio" :name="index" :id="'r'+index+'1'" v-model="item.val" value="1" :checked="item.val == '1'"><label :for="'r'+index+'1'">{{answers.sd[lang]}}</label></p>
@@ -424,6 +440,10 @@ strong{
 	display:inline-block;
 	margin-right:1rem;
 }
+.lang {
+	padding-left: .2rem;
+}
+
 
 .qtitle {
 
