@@ -7,7 +7,7 @@
 			"pl":"Po okresie niestabilności potrzebuję spokojnego i przewidywalnego otoczenia."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -17,7 +17,7 @@
 			"pl":"Potrzebuję spokojnego i przewidywalnego otoczenia, by móc łatwo przechodzić od jednego zadania do drugiego."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -27,7 +27,7 @@
 			"pl":"Często mam trudności z koncentracją w ruchliwym i/lub nieprzewidywalnym otoczeniu."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -37,7 +37,7 @@
 			"pl":"Nagłe, niespodziewane zakłócenia mojej uwagi powodują, że się wzdrygam/podskakuję."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -47,7 +47,7 @@
 			"pl":"Niespodziewane oderwanie od czegoś, w co jestem zaangażowana/y, jest dla mnie stresujące."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -57,7 +57,7 @@
 			"pl":"Jednoczesne utrzymywanie kontaktu wzrokowego i prowadzenie werbalnej konwersacji z inną osobą rzadko jest dla mnie niewygodne."
 		},
 		"reverse": true,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -67,7 +67,7 @@
 			"pl":"Często zauważam szczegóły, których inni nie dostrzegają."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -77,7 +77,7 @@
 			"pl":"Zaangażowanie w interesującą mnie czynność często zmniejsza mój poziom niepokoju."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -87,7 +87,7 @@
 			"pl":"Interakcje społeczne są dla mnie bardziej komfortowe, jeśli komunikuję się na interesujący mnie temat."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -97,7 +97,7 @@
 			"pl":"Często jestem całkowicie skupiona/y na czynnościach, które mnie pasjonują, do tego stopnia, że nie jestem świadoma/y innych wydarzeń."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -107,7 +107,7 @@
 			"pl":"Potrafię być w czymś całkiem dobra/y, nawet jeśli nie jestem tym szczególnie zainteresowana/y."
 		},
 		"reverse": true,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -117,7 +117,7 @@
 			"pl":"Często tracę poczucie czasu, gdy angażuję się w czynności, które mnie pasjonują."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -127,7 +127,7 @@
 			"pl":"Czasami unikam rozmowy, ponieważ nie jestem w stanie przewidzieć, jak zareagują inni, zwłaszcza nieznajomi."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -137,7 +137,7 @@
 			"pl":"Mam tendencję do wykonywania czynności, ponieważ uważam je za interesujące, a nie ze względu na oczekiwania społeczne."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -147,7 +147,7 @@
 			"pl":"Rzadko uważam sytuacje społeczne za chaotyczne."
 		},
 		"reverse": true,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -157,7 +157,7 @@
 			"pl":"Nie przeszkadza mi, gdy ktoś przerywa mi w trakcie wykonywania jakiejś czynności."
 		},
 		"reverse": true,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -167,7 +167,7 @@
 			"pl":"Kiedy nad czymś pracuję, jestem otwarta/y na pomocne sugestie."
 		},
 		"reverse": true,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -177,7 +177,7 @@
 			"pl":"Często trudno mi zmienić temat po dłuższym zaangażowaniu się w jakąś czynność."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -187,7 +187,7 @@
 			"pl":"Często angażuję się w czynności, które mnie pasjonują, by uciec od niepokoju."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -197,7 +197,7 @@
 			"pl":"Rutyna jest ważnym źródłem stabilności i bezpieczeństwa."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -207,7 +207,7 @@
 			"pl":"Radzę sobie z niepewnością poprzez tworzenie rutyn."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -217,7 +217,7 @@
 			"pl":"Często odczuwam niepokój w sprawach, co do których nie mam pewności."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -227,7 +227,7 @@
 			"pl":"Trudno mi zaangażować się w zadanie, które mnie nie interesuje, nawet jeśli jest ważne."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -237,7 +237,7 @@
 			"pl":"Często uważam, że stimowanie (np. klikanie długopisem, kołysanie się) jest relaksujące."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -247,7 +247,7 @@
 			"pl":"Zazwyczaj pasjonuję się kilkoma tematami jednocześnie."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -257,7 +257,7 @@
 			"pl":"Mam problemy z filtrowaniem dźwięków, gdy nie robię czegoś, na czym jestem skupiona/y."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -267,7 +267,7 @@
 			"pl":"Zazwyczaj chodzi mi tylko o to, o czym mówię, nic ponad to."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -277,7 +277,7 @@
 			"pl":"Często angażuję się w długie dyskusje na tematy, które uważam za interesujące, nawet jeśli moi rozmówcy tego nie robią."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -287,7 +287,7 @@
 			"pl":"Czasami przypadkowo mówię coś, co inni uznają za obraźliwe/niegrzeczne, gdy jestem skupiona/y na zadaniu."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -297,7 +297,7 @@
 			"pl":"Czasami mogę być bardzo zmartwiona/y tematem, który inni uważają za błahy."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -307,7 +307,7 @@
 			"pl":"Łatwo mi nadążyć za dyskusjami grupowymi, w których wszyscy zabierają głos."
 		},
 		"reverse": true,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -317,7 +317,7 @@
 			"pl":"Często, gdy jestem skupiona/y na zadaniach, nie zauważam, że jestem spragniona/y lub głodna/y."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -327,7 +327,7 @@
 			"pl":"Często, gdy jestem skupiona/y na zadaniach, nie zauważam, że potrzebuję skorzystać z toalety."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -337,7 +337,7 @@
 			"pl":"Kiedy mam do rozważenia wiele informacji, często mam trudności z podjęciem decyzji."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -347,7 +347,7 @@
 			"pl":"Czasami podjęcie decyzji jest tak trudne, że aż mnie to fizycznie paraliżuje."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -357,7 +357,7 @@
 			"pl":"Czasami skupiam się na zdarzeniu przez dłuższy czas (dni) po jego zakończeniu."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -367,7 +367,7 @@
 			"pl":"Czasami staję się bardzo niespokojna/y, koncentrując się na wielu możliwych sytuacjach, które mogą wystąpić w przyszłości."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -377,7 +377,7 @@
 			"pl":"Czasami, gdy skupiam się na jakiejś czynności, nie pamiętam wszystkich informacji, których mogę potrzebować do podjęcia dobrych decyzji."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -387,7 +387,7 @@
 			"pl":"Ludzie mówią mi, że skupiam się na różnych rzeczach."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -397,7 +397,7 @@
 			"pl":"Problem, którego nie mogę rozwiązać, jest dla mnie stresujący i/lub trudny do odłożenia."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -407,7 +407,7 @@
 			"pl":"Czuję się dość skrępowana/y, chyba że jestem głęboko pochłonięta/y jakimś zadaniem."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -417,7 +417,7 @@
 			"pl":"Często utykam w martwym punkcie, myśląc o wszystkich możliwościach, które mogą wyniknąć z danej decyzji."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -427,7 +427,7 @@
 			"pl":"Kiedy jestem czymś zainteresowana/y, mam tendencję do pasjonowania się tym."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -437,7 +437,7 @@
 			"pl":"Kiedy interesuje mnie jakiś temat, lubię dowiedzieć się o nim wszystkiego, co tylko mogę."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -447,7 +447,7 @@
 			"pl":"Nadal fascynuje mnie wiele rzeczy, którymi interesowałam/em się, gdy byłam/em znacznie młodsza/y."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -457,7 +457,7 @@
 			"pl":"Rzadko zdarza mi się utknąć w pętli myśli."
 		},
 		"reverse": true,
-		"val": 0
+		"val": null
 	},
 	{
 		"question": {
@@ -467,6 +467,6 @@
 			"pl":"Często wracam do poprzednich myśli."
 		},
 		"reverse": false,
-		"val": 0
+		"val": null
 	}
 ]

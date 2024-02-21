@@ -33,6 +33,7 @@ export default {
 			questions : questions,
 			answers:answers,
 			scorebox: false,
+			errorbox: false,
 			score: 0,
 			avg: 0,
 			scoreQuote: "",
@@ -93,11 +94,25 @@ export default {
 			}
 		},
 		checkscore() {
+			this.errorbox=false
+
+			let l = this.questions.length;
+			for (var i = 0; i < l; i++) {
+				var x = this.questions[i].val
+				if (x === null) {
+					this.errorbox=true
+					console.log("found null")
+					this.scoreQuote ="You must answer all questions before submitting, even if the question does not apply, please select N/A."
+					return
+				}
+			}
+
 			this.scorebox=true
 			let num_questions = this.questions.length;
-			let l = this.questions.length;
+			
 			console.log("num questions: "+num_questions)
 			let score = 0;
+			
 			for (var i = 0; i < l; i++) {
 				var x = parseInt(this.questions[i].val)
 				if (x === 0) {
@@ -299,6 +314,9 @@ export default {
 			<div id="slider">
 			</div>  -->
 			
+		</div>
+		<div class="score_box" v-show="errorbox">
+			<p v-html="scoreQuote"></p>
 		</div>
 	</div>
 </template>
