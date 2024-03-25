@@ -8,13 +8,13 @@
 	"sd": {
 	  "en": "Strongly Disagree",
 	  "pt": "Discordo totalmente",
-	  "de": "Stimme voll und ganz zu",
+	  "de": "Stimme überhaupt nicht zu",
 	  "pl": "Zdecydowanie się zgadzam "
 	},
 	"d": {
 	  "en": "Disagree",
 	  "pt": "Discordo",
-	  "de": "Stimme zu",
+	  "de": "Stimme nicht zu",
 	  "pl": "Zgadzam się"
 	},
 	"nad": {
@@ -26,13 +26,13 @@
 	"a": {
 	  "en": "Agree",
 	  "pt": "Concordo",
-	  "de": "Stimme nicht zu",
+	  "de": "Stimme zu",
 	  "pl": "Nie zgadzam się"
 	},
 	"sa": {
 	  "en": "Strongly Agree",
 	  "pt": "Concordo totalmente",
-	  "de": "Stimme überhaupt nicht zu",
+	  "de": "Stimme voll und ganz zu",
 	  "pl": "Zdecydowanie się nie zgadzam"
 	}
   }
