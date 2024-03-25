@@ -4,7 +4,8 @@
 			"en": "After a period of instability, I need a quiet and predictable environment.",
 			"pt": "Após um período de instabilidade, preciso de um ambiente calmo e previsível.",
 			"de": "Nach einer Phase der Instabilität brauche ich eine ruhige und berechenbare Umgebung.",
-			"pl":"Po okresie niestabilności potrzebuję spokojnego i przewidywalnego otoczenia."
+			"pl": "Po okresie niestabilności potrzebuję spokojnego i przewidywalnego otoczenia.",
+			"rus":"После периода нестабильности, я нуждаюсь в тихой и предсказуемой обстановке."
 		},
 		"reverse": false,
 		"val": null
@@ -14,7 +15,8 @@
 			"en": "I need a quiet and predictable environment for me to switch from one task to another easily.",
 			"pt": "Preciso de um ambiente calmo e previsível para poder passar facilmente de uma tarefa para outra.",
 			"de": "Ich brauche eine ruhige und berechenbare Umgebung, damit ich leicht von einer Aufgabe zur nächsten wechseln kann.",
-			"pl":"Potrzebuję spokojnego i przewidywalnego otoczenia, by móc łatwo przechodzić od jednego zadania do drugiego."
+			"pl":"Potrzebuję spokojnego i przewidywalnego otoczenia, by móc łatwo przechodzić od jednego zadania do drugiego.",
+			"rus":"Мне нужна тихая и предсказуемая обстановка для того, чтобы я мог(ла) легко переключаться с одной задачи на другую."
 		},
 		"reverse": false,
 		"val": null
@@ -24,7 +26,8 @@
 			"en": "I often struggle to concentrate in busy and/or unpredictable environments.",
 			"pt": "Tenho frequentemente dificuldade em concentrar-me em ambientes movimentados e/ou imprevisíveis.",
 			"de": "In einer geschäftigen und/oder unvorhersehbaren Umgebung fällt es mir oft schwer, mich zu konzentrieren.",
-			"pl":"Często mam trudności z koncentracją w ruchliwym i/lub nieprzewidywalnym otoczeniu."
+			"pl":"Często mam trudności z koncentracją w ruchliwym i/lub nieprzewidywalnym otoczeniu.",
+			"rus":"Мне часто трудно сосредоточиться в оживленной и/или непредсказуемой обстановке."
 		},
 		"reverse": false,
 		"val": null
@@ -34,7 +37,8 @@
 			"en": "I find sudden unexpected disruptions to my attention startling.",
 			"pt": "As interrupções súbitas e inesperadas da minha atenção assustam-me.",
 			"de": "Plötzliche, unerwartete Unterbrechungen meiner Aufmerksamkeit erschrecken mich.",
-			"pl":"Nagłe, niespodziewane zakłócenia mojej uwagi powodują, że się wzdrygam/podskakuję."
+			"pl":"Nagłe, niespodziewane zakłócenia mojej uwagi powodują, że się wzdrygam/podskakuję.",
+			"rus":"Когда мое внимание сфокусировано, внезапное прерывание извне может всполошить и/или испугать меня."
 		},
 		"reverse": false,
 		"val": null
@@ -44,7 +48,8 @@
 			"en": "It's distressing to be unexpectedly pulled away from something I'm engaged in.",
 			"pt": "É angustiante ser inesperadamente afastado de algo em que estou empenhado.",
 			"de": "Es ist beunruhigend, wenn ich unerwartet von etwas weggezogen werde, mit dem ich gerade beschäftigt bin.",
-			"pl":"Niespodziewane oderwanie od czegoś, w co jestem zaangażowana/y, jest dla mnie stresujące."
+			"pl":"Niespodziewane oderwanie od czegoś, w co jestem zaangażowana/y, jest dla mnie stresujące.",
+			"rus":"Я расстраиваюсь, если меня отрывают от дела, которым я увлеченно занимаюсь."
 		},
 		"reverse": false,
 		"val": null
@@ -54,7 +59,8 @@
 			"en": "I rarely find simultaneously holding eye contact and making a verbal conversation with another person uncomfortable.",
 			"pt": "Raramente me sinto desconfortável por manter simultaneamente o contacto visual e manter uma conversa verbal com outra pessoa.",
 			"de": "Ich empfinde es selten als unangenehm, gleichzeitig Blickkontakt zu halten und ein verbales Gespräch mit einer anderen Person zu führen.",
-			"pl":"Jednoczesne utrzymywanie kontaktu wzrokowego i prowadzenie werbalnej konwersacji z inną osobą rzadko jest dla mnie niewygodne."
+			"pl":"Jednoczesne utrzymywanie kontaktu wzrokowego i prowadzenie werbalnej konwersacji z inną osobą rzadko jest dla mnie niewygodne.",
+			"rus":"Мне редко бывает дискомфортно вести устную беседу с человеком и в то же время поддерживать с ним зрительный контакт."
 		},
 		"reverse": true,
 		"val": null
@@ -64,7 +70,8 @@
 			"en": "I often notice details that others do not.",
 			"pt": "Reparo frequentemente em pormenores que os outros não reparam.",
 			"de": "Ich bemerke oft Details, die andere nicht wahrnehmen.",
-			"pl":"Często zauważam szczegóły, których inni nie dostrzegają."
+			"pl":"Często zauważam szczegóły, których inni nie dostrzegają.",
+			"rus":"Я часто замечаю детали и нюансы, которых не видят другие люди."
 		},
 		"reverse": false,
 		"val": null
@@ -74,7 +81,8 @@
 			"en": "Involvement in an activity of interest often reduces my anxiety level.",
 			"pt": "O envolvimento numa atividade de interesse reduz frequentemente o meu nível de ansiedade.",
 			"de": "Die Teilnahme an einer Aktivität, die mich interessiert, senkt oft mein Angstniveau.",
-			"pl":"Zaangażowanie w interesującą mnie czynność często zmniejsza mój poziom niepokoju."
+			"pl":"Zaangażowanie w interesującą mnie czynność często zmniejsza mój poziom niepokoju.",
+			"rus":"Занятие чем-то интересным часто уменьшает мою тревогу."
 		},
 		"reverse": false,
 		"val": null
@@ -84,7 +92,8 @@
 			"en": "I find social interactions more comfortable if communicating about a topic of interest to me.",
 			"pt": "Considero as interacções sociais mais confortáveis, se comunicar sobre um tópico do meu interesse.",
 			"de": "Ich empfinde soziale Interaktionen als angenehmer, wenn ich mich über ein Thema unterhalte, das mich interessiert.",
-			"pl":"Interakcje społeczne są dla mnie bardziej komfortowe, jeśli komunikuję się na interesujący mnie temat."
+			"pl":"Interakcje społeczne są dla mnie bardziej komfortowe, jeśli komunikuję się na interesujący mnie temat.",
+			"rus":"Я ощущаю себя комфортнее в общении с людьми, если разговор идет об интересующей меня теме."
 		},
 		"reverse": false,
 		"val": null
@@ -94,7 +103,8 @@
 			"en": "I am often totally focused on activities I am passionate about, to the point I am unaware of other events.",
 			"pt": "Muitas vezes estou totalmente concentrado em atividades que me apaixonam, ao ponto de não me aperceber de outros acontecimentos. ",
 			"de": "Ich konzentriere mich oft so sehr auf Aktivitäten, die mich interessieren, dass ich andere Ereignisse gar nicht mehr wahrnehme.",
-			"pl":"Często jestem całkowicie skupiona/y na czynnościach, które mnie pasjonują, do tego stopnia, że nie jestem świadoma/y innych wydarzeń."
+			"pl":"Często jestem całkowicie skupiona/y na czynnościach, które mnie pasjonują, do tego stopnia, że nie jestem świadoma/y innych wydarzeń.",
+			"rus":"Часто я настолько фокусируюсь на занятиях, которыми увлечен(а), что порой не замечаю происходящего вокруг."
 		},
 		"reverse": false,
 		"val": null
@@ -104,7 +114,8 @@
 			"en": "I can get quite good at something even if I'm not especially interested in it.",
 			"pt": "Posso tornar-me bastante bom em alguma coisa, mesmo que não esteja especialmente interessado nela.",
 			"de": "Ich kann ziemlich gut in etwas werden, auch wenn es mich nicht besonders interessiert.",
-			"pl":"Potrafię być w czymś całkiem dobra/y, nawet jeśli nie jestem tym szczególnie zainteresowana/y."
+			"pl":"Potrafię być w czymś całkiem dobra/y, nawet jeśli nie jestem tym szczególnie zainteresowana/y.",
+			"rus":"Я могу добиться неплохих результатов даже в том деле, которое мне не особенно интересно."
 		},
 		"reverse": true,
 		"val": null
@@ -114,7 +125,8 @@
 			"en": "I often lose sense of time when engaging in activities I am passionate about.",
 			"pt": "Perco frequentemente a noção do tempo quando estou envolvido em atividades que me apaixonam.",
 			"de": "Ich verliere oft das Zeitgefühl, wenn ich einer Tätigkeit nachgehe, die ich leidenschaftlich gerne mache.",
-			"pl":"Często tracę poczucie czasu, gdy angażuję się w czynności, które mnie pasjonują."
+			"pl":"Często tracę poczucie czasu, gdy angażuję się w czynności, które mnie pasjonują.",
+			"rus":"Время летит для меня незаметно, когда я увлечённо занимаюсь своим любимым делом."
 		},
 		"reverse": false,
 		"val": null
@@ -124,7 +136,8 @@
 			"en": "I sometimes avoid talking because I cannot reliably predict how others will react, especially strangers.",
 			"pt": "Por vezes evito falar porque não consigo prever com fiabilidade a reação dos outros, especialmente dos estranhos.",
 			"de": "Ich vermeide es manchmal zu sprechen, weil ich nicht zuverlässig vorhersagen kann, wie andere, insbesondere Fremde, reagieren werden.",
-			"pl":"Czasami unikam rozmowy, ponieważ nie jestem w stanie przewidzieć, jak zareagują inni, zwłaszcza nieznajomi."
+			"pl":"Czasami unikam rozmowy, ponieważ nie jestem w stanie przewidzieć, jak zareagują inni, zwłaszcza nieznajomi.",
+			"rus":"Я иногда избегаю разговоров, потому что не могу достоверно предсказать реакцию окружающих, в особенности незнакомых людей."
 		},
 		"reverse": false,
 		"val": null
@@ -134,7 +147,8 @@
 			"en": "I tend to do activities because I find them interesting, instead of due to societal expectations.",
 			"pt": "Normalmente, faço atividades porque as acho interessantes, e não devido às expectativas sociais.",
 			"de": "Ich neige dazu, Aktivitäten zu unternehmen, weil ich sie interessant finde, und nicht aufgrund gesellschaftlicher Erwartungen.",
-			"pl":"Mam tendencję do wykonywania czynności, ponieważ uważam je za interesujące, a nie ze względu na oczekiwania społeczne."
+			"pl":"Mam tendencję do wykonywania czynności, ponieważ uważam je za interesujące, a nie ze względu na oczekiwania społeczne.",
+			"rus":"Я склонен/-на заниматься чем-то, потому что считаю это интересным, а не из-за ожиданий общества."
 		},
 		"reverse": false,
 		"val": null
@@ -144,7 +158,8 @@
 			"en": "I rarely find social situations chaotic.",
 			"pt": "Raramente considero as situações sociais caóticas.",
 			"de": "Soziale Situationen empfinde ich selten als chaotisch.",
-			"pl":"Rzadko uważam sytuacje społeczne za chaotyczne."
+			"pl":"Rzadko uważam sytuacje społeczne za chaotyczne.",
+			"rus":"Социальные ситуации редко кажутся мне хаотичными."
 		},
 		"reverse": true,
 		"val": null
@@ -154,7 +169,8 @@
 			"en": "I don't mind if someone interrupts me when I'm in the middle of an activity.",
 			"pt": "Não me importo que alguém me interrompa quando estou a meio de uma atividade.",
 			"de": "Es macht mir nichts aus, wenn mich jemand unterbricht, wenn ich mitten in einer Aktivität bin.",
-			"pl":"Nie przeszkadza mi, gdy ktoś przerywa mi w trakcie wykonywania jakiejś czynności."
+			"pl":"Nie przeszkadza mi, gdy ktoś przerywa mi w trakcie wykonywania jakiejś czynności.",
+			"rus":"Я не возражаю, если кто-то прерывает меня, в то время как я чем-то занят(а)."
 		},
 		"reverse": true,
 		"val": null
@@ -164,7 +180,8 @@
 			"en": "When I'm working on something, I'm open to helpful suggestions.",
 			"pt": "Quando estou a trabalhar em algo, estou aberto a sugestões úteis.",
 			"de": "Wenn ich an etwas arbeite, bin ich offen für hilfreiche Vorschläge.",
-			"pl":"Kiedy nad czymś pracuję, jestem otwarta/y na pomocne sugestie."
+			"pl":"Kiedy nad czymś pracuję, jestem otwarta/y na pomocne sugestie.",
+			"rus":"Я рад(а) полезным советам и предложениям, когда работаю над чем-то."
 		},
 		"reverse": true,
 		"val": null
@@ -174,7 +191,8 @@
 			"en": "I often find it difficult to switch topics after engaging in an activity for a long time.",
 			"pt": "Muitas vezes tenho dificuldade em mudar de assunto depois de me envolver numa atividade durante muito tempo.",
 			"de": "Es fällt mir oft schwer, das Thema zu wechseln, wenn ich mich lange mit einer Tätigkeit beschäftigt habe.",
-			"pl":"Często trudno mi zmienić temat po dłuższym zaangażowaniu się w jakąś czynność."
+			"pl":"Często trudno mi zmienić temat po dłuższym zaangażowaniu się w jakąś czynność.",
+			"rus":"Мне часто сложно переключиться на другую тему после занятия чем-то одним длительное время."
 		},
 		"reverse": false,
 		"val": null
@@ -184,7 +202,8 @@
 			"en": "I often engage in activities I am passionate about to escape from anxiety.",
 			"pt": "Muitas vezes, envolvo-me em atividades que me apaixonam para fugir à ansiedade.",
 			"de": "Ich beschäftige mich oft mit Aktivitäten, die mir Spaß machen, um der Angst zu entkommen.",
-			"pl":"Często angażuję się w czynności, które mnie pasjonują, by uciec od niepokoju."
+			"pl":"Często angażuję się w czynności, które mnie pasjonują, by uciec od niepokoju.",
+			"rus":"Я часто занимаюсь любимыми делами, чтобы избавиться от тревожности."
 		},
 		"reverse": false,
 		"val": null
@@ -194,7 +213,8 @@
 			"en": "Routines provide an important source of stability and safety.",
 			"pt": "As rotinas são uma fonte importante de estabilidade e segurança.",
 			"de": "Routinen sind eine wichtige Quelle der Stabilität und Sicherheit.",
-			"pl":"Rutyna jest ważnym źródłem stabilności i bezpieczeństwa."
+			"pl":"Rutyna jest ważnym źródłem stabilności i bezpieczeństwa.",
+			"rus":"Распорядок дня и/или действий для меня является важным источником стабильности и безопасности."
 		},
 		"reverse": false,
 		"val": null
@@ -204,7 +224,8 @@
 			"en": "I manage uncertainty by creating routines.",
 			"pt": "Eu controlo a incerteza criando rotinas.",
 			"de": "Ich gehe mit Unsicherheiten um, indem ich Routinen schaffe.",
-			"pl":"Radzę sobie z niepewnością poprzez tworzenie rutyn."
+			"pl":"Radzę sobie z niepewnością poprzez tworzenie rutyn.",
+			"rus":"Организуя порядок в своей жизни, я справляюсь с её неопределённостью."
 		},
 		"reverse": false,
 		"val": null
@@ -214,7 +235,8 @@
 			"en": "I often experience anxiety over matters I have little certainty over.",
 			"pt": "Sinto-me frequentemente ansioso em relação a assuntos sobre os quais tenho poucas certezas.",
 			"de": "Ich habe oft Angst vor Dingen, bei denen ich wenig Gewissheit habe.",
-			"pl":"Często odczuwam niepokój w sprawach, co do których nie mam pewności."
+			"pl":"Często odczuwam niepokój w sprawach, co do których nie mam pewności.",
+			"rus":"Я часто тревожусь по поводу вопросов, в которых у меня мало уверенности."
 		},
 		"reverse": false,
 		"val": null
@@ -224,7 +246,8 @@
 			"en": "I find it difficult to engage in a task of no interest to me even if it is important.",
 			"pt": "Tenho dificuldade em dedicar-me a uma tarefa que não me interessa, mesmo que seja importante.",
 			"de": "Es fällt mir schwer, mich mit einer Aufgabe zu beschäftigen, die mich nicht interessiert, selbst wenn sie wichtig ist.",
-			"pl":"Trudno mi zaangażować się w zadanie, które mnie nie interesuje, nawet jeśli jest ważne."
+			"pl":"Trudno mi zaangażować się w zadanie, które mnie nie interesuje, nawet jeśli jest ważne.",
+			"rus":"Мне трудно заниматься неинтересным для меня делом, даже если оно важное."
 		},
 		"reverse": false,
 		"val": null
@@ -234,7 +257,8 @@
 			"en": "I often find engaging in stimming (e.g.,fidgeting, rocking) to be relaxing.",
 			"pt": "Muitas vezes, considero relaxante o facto de me envolver em estímulos (por exemplo, mexer-me, balançar).",
 			"de": "Ich empfinde es oft als entspannend, wenn ich mich mit Stimming beschäftige (z.B. Fingerschnippen, Schaukeln).",
-			"pl":"Często uważam, że stimowanie (np. klikanie długopisem, kołysanie się) jest relaksujące."
+			"pl":"Często uważam, że stimowanie (np. klikanie długopisem, kołysanie się) jest relaksujące.",
+			"rus":"Стимминг (повторяющиеся движения: покачивание, тряска, игра с предметами в руках) часто действует на меня успокаивающе, расслабляет."
 		},
 		"reverse": false,
 		"val": null
@@ -244,7 +268,8 @@
 			"en": "I am usually passionate about a few topics at any one time in my life.",
 			"pt": "Normalmente, apaixono-me por um pequeno número de temas de cada vez, nos vários momentos da minha vida.",
 			"de": "Ich interessiere mich in der Regel nur für wenige Themen gleichzeitig.",
-			"pl":"Zazwyczaj pasjonuję się kilkoma tematami jednocześnie."
+			"pl":"Zazwyczaj pasjonuję się kilkoma tematami jednocześnie.",
+			"rus":"Обычно я увлекаюсь лишь небольшим количеством вещей одновременно."
 		},
 		"reverse": false,
 		"val": null
@@ -254,7 +279,8 @@
 			"en": "I have trouble filtering out sounds when I am not doing something I'm focused on.",
 			"pt": "Tenho dificuldade em filtrar os sons quando estou a fazer algo em que não estou focado.",
 			"de": "Ich habe Schwierigkeiten, Geräusche herauszufiltern, wenn ich nicht gerade etwas tue, worauf ich mich konzentriere.",
-			"pl":"Mam problemy z filtrowaniem dźwięków, gdy nie robię czegoś, na czym jestem skupiona/y."
+			"pl":"Mam problemy z filtrowaniem dźwięków, gdy nie robię czegoś, na czym jestem skupiona/y.",
+			"rus":"Мне сложно не обращать внимания на окружающие звуки, за исключением моментов, когда я сильно погружен(а) в какое-то дело."
 		},
 		"reverse": false,
 		"val": null
@@ -264,7 +290,8 @@
 			"en": "I usually mean what I say and no more than that.",
 			"pt": "Normalmente, quero dizer  aquilo que disse, e não mais do que isso.",
 			"de": "Ich meine in der Regel, was ich sage, und nicht mehr als das.",
-			"pl":"Zazwyczaj chodzi mi tylko o to, o czym mówię, nic ponad to."
+			"pl":"Zazwyczaj chodzi mi tylko o to, o czym mówię, nic ponad to.",
+			"rus":"Обычно я имею в виду именно то, что говорю, и ничего больше."
 		},
 		"reverse": false,
 		"val": null
@@ -274,7 +301,8 @@
 			"en": "I often engage in lengthy discussions on topics I find interesting even though my conversational partner(s) do not.",
 			"pt": "Muitas vezes, discorro longamente sobre temas que considero interessantes, mesmo que não sejam do interesse do(s) meu(s) interlocutor(es).",
 			"de": "Ich lasse mich oft auf lange Diskussionen über Themen ein, die ich interessant finde, auch wenn mein(e) Gesprächspartner das nicht tun.",
-			"pl":"Często angażuję się w długie dyskusje na tematy, które uważam za interesujące, nawet jeśli moi rozmówcy tego nie robią."
+			"pl":"Często angażuję się w długie dyskusje na tematy, które uważam za interesujące, nawet jeśli moi rozmówcy tego nie robią.",
+			"rus":"Я часто пускаюсь в длительные рассуждения на темы, которые интересны мне, но не моим собеседникам."
 		},
 		"reverse": false,
 		"val": null
@@ -284,7 +312,8 @@
 			"en": "I sometimes accidentally say something others find offensive/rude when I am focused on a task.",
 			"pt": "Por vezes, quando estou concentrado numa tarefa, digo acidentalmente algo que os outros consideram ofensivo/rude.",
 			"de": "Ich sage manchmal versehentlich etwas, was andere als beleidigend/unhöflich empfinden, wenn ich mich auf eine Aufgabe konzentriere.",
-			"pl":"Czasami przypadkowo mówię coś, co inni uznają za obraźliwe/niegrzeczne, gdy jestem skupiona/y na zadaniu."
+			"pl":"Czasami przypadkowo mówię coś, co inni uznają za obraźliwe/niegrzeczne, gdy jestem skupiona/y na zadaniu.",
+			"rus":"Если я сильно сфокусирован(а) на занятии, то могу случайно ответить так, что люди посчитают мои слова грубыми или обидными."
 		},
 		"reverse": false,
 		"val": null
@@ -294,7 +323,8 @@
 			"en": "I can sometimes be very distressed by a topic that others think of as trivial.",
 			"pt": "Posso, por vezes, ficar muito stressado com um assunto que os outros consideram trivial.",
 			"de": "Ein Thema, das andere als trivial empfinden, kann mich manchmal sehr beunruhigen.",
-			"pl":"Czasami mogę być bardzo zmartwiona/y tematem, który inni uważają za błahy."
+			"pl":"Czasami mogę być bardzo zmartwiona/y tematem, który inni uważają za błahy.",
+			"rus":"Иногда меня сильно беспокоят вопросы, которые другие люди сочли бы незначительными."
 		},
 		"reverse": false,
 		"val": null
@@ -304,7 +334,8 @@
 			"en": "I find it easy to keep up with group discussions where everyone is speaking.",
 			"pt": "Tenho facilidade em acompanhar discussões em grupo em que todos estão a falar.",
 			"de": "Es fällt mir leicht, bei Gruppendiskussionen mitzuhalten, bei denen alle sprechen.",
-			"pl":"Łatwo mi nadążyć za dyskusjami grupowymi, w których wszyscy zabierają głos."
+			"pl":"Łatwo mi nadążyć za dyskusjami grupowymi, w których wszyscy zabierają głos.",
+			"rus":"Мне легко поддерживать групповую дискуссию, когда каждый принимает участие в разговоре."
 		},
 		"reverse": true,
 		"val": null
@@ -314,7 +345,8 @@
 			"en": "Often when I am focused on activities, I do not notice I am thirsty or hungry.",
 			"pt": "Muitas vezes, quando estou concentrado em atividades, não me apercebo que tenho sede ou fome.",
 			"de": "Wenn ich mich auf eine Tätigkeit konzentriere, merke ich oft nicht, dass ich durstig oder hungrig bin.",
-			"pl":"Często, gdy jestem skupiona/y na zadaniach, nie zauważam, że jestem spragniona/y lub głodna/y."
+			"pl":"Często, gdy jestem skupiona/y na zadaniach, nie zauważam, że jestem spragniona/y lub głodna/y.",
+			"rus":"Часто, когда я сфокусирован(а) на занятии, я не замечаю, что хочу пить или есть."
 		},
 		"reverse": false,
 		"val": null
@@ -324,7 +356,8 @@
 			"en": "Often when I am focused on activities, I do not notice I need the bathroom.",
 			"pt": "Muitas vezes, quando estou concentrado nas atividades, não me apercebo que preciso de ir à casa de banho.",
 			"de": "Wenn ich mich auf eine Tätigkeit konzentriere, bemerke ich oft nicht, dass ich auf die Toilette muss.",
-			"pl":"Często, gdy jestem skupiona/y na zadaniach, nie zauważam, że potrzebuję skorzystać z toalety."
+			"pl":"Często, gdy jestem skupiona/y na zadaniach, nie zauważam, że potrzebuję skorzystać z toalety.",
+			"rus":"Часто, когда я сфокусирован(а) на занятии, я не замечаю, что мне нужно сходить в туалет."
 		},
 		"reverse": false,
 		"val": null
@@ -334,7 +367,8 @@
 			"en": "When there is a lot of information to consider, I often struggle to make a decision. ",
 			"pt": "Quando há muita informação para considerar,  tenho muitas vezes dificuldade em tomar uma decisão.",
 			"de": "Wenn es viele Informationen zu berücksichtigen gibt, fällt es mir oft schwer, eine Entscheidung zu treffen.",
-			"pl":"Kiedy mam do rozważenia wiele informacji, często mam trudności z podjęciem decyzji."
+			"pl":"Kiedy mam do rozważenia wiele informacji, często mam trudności z podjęciem decyzji.",
+			"rus":"Мне часто сложно принять решение, когда для этого нужно обдумать много информации."
 		},
 		"reverse": false,
 		"val": null
@@ -344,7 +378,8 @@
 			"en": "Sometimes making a decision is so hard I get physically stuck. ",
 			"pt": "Por vezes, é tão difícil tomar uma decisão que fico fisicamente bloqueado.",
 			"de": "Manchmal ist es so schwer, eine Entscheidung zu treffen, dass es mich physisch lähmt.",
-			"pl":"Czasami podjęcie decyzji jest tak trudne, że aż mnie to fizycznie paraliżuje."
+			"pl":"Czasami podjęcie decyzji jest tak trudne, że aż mnie to fizycznie paraliżuje.",
+			"rus":"Иногда мне так трудно принять решение, что я впадаю в ступор."
 		},
 		"reverse": false,
 		"val": null
@@ -354,7 +389,8 @@
 			"en": "I sometimes focus on an incident for a substantial time (days) after the event.",
 			"pt": "Por vezes, mantenho-me focado num incidente, muito tempo (dias) após o mesmo ter ocorrido.",
 			"de": "Manchmal beschäftige ich mich noch eine ganze Weile (Tage) nach dem Ereignis mit einem Vorfall.",
-			"pl":"Czasami skupiam się na zdarzeniu przez dłuższy czas (dni) po jego zakończeniu."
+			"pl":"Czasami skupiam się na zdarzeniu przez dłuższy czas (dni) po jego zakończeniu.",
+			"rus":"Иногда я зацикливаюсь на небольшом происшествии на протяжении значительного времени (дни) после события."
 		},
 		"reverse": false,
 		"val": null
@@ -364,7 +400,8 @@
 			"en": "I sometimes become highly anxious by focusing on the many possible situations that might occur at a future event.",
 			"pt": "Por vezes, fico muito ansioso ao focar-me nas várias situações possíveis que podem decorrer de um acontecimento futuro.",
 			"de": "Manchmal werde ich sehr ängstlich, wenn ich mich auf die vielen möglichen Situationen konzentriere, die bei einem zukünftigen Ereignis auftreten könnten.",
-			"pl":"Czasami staję się bardzo niespokojna/y, koncentrując się na wielu możliwych sytuacjach, które mogą wystąpić w przyszłości."
+			"pl":"Czasami staję się bardzo niespokojna/y, koncentrując się na wielu możliwych sytuacjach, które mogą wystąpić w przyszłości.",
+			"rus":"Иногда я начинаю сильно тревожиться, обдумывая все возможные ситуации, которые могут возникнуть на предстоящем мероприятии."
 		},
 		"reverse": false,
 		"val": null
@@ -374,7 +411,8 @@
 			"en": "Sometimes when I am focused on an activity, I do not recall all the information I might need to make good decisions.",
 			"pt": "Por vezes, quando estou concentrado numa atividade, não me lembro de toda a informação de que preciso para tomar boas decisões.",
 			"de": "Wenn ich mich auf eine Tätigkeit konzentriere, erinnere ich mich manchmal nicht an alle Informationen, die ich brauche, um gute Entscheidungen zu treffen.",
-			"pl":"Czasami, gdy skupiam się na jakiejś czynności, nie pamiętam wszystkich informacji, których mogę potrzebować do podjęcia dobrych decyzji."
+			"pl":"Czasami, gdy skupiam się na jakiejś czynności, nie pamiętam wszystkich informacji, których mogę potrzebować do podjęcia dobrych decyzji.",
+			"rus":"Порой, будучи сфокусированным/-ой на каком-то деле, я не могу полностью вспомнить информацию, которая мне бы пригодилась для принятия правильных решений."
 		},
 		"reverse": false,
 		"val": null
@@ -384,7 +422,8 @@
 			"en": "People tell me I get fixated on things.",
 			"pt": "As pessoas dizem-me que fico fixado nas coisas.",
 			"de": "Man sagt mir, dass ich auf Dinge fixiert bin.",
-			"pl":"Ludzie mówią mi, że skupiam się na różnych rzeczach."
+			"pl":"Ludzie mówią mi, że skupiam się na różnych rzeczach.",
+			"rus":"Люди говорят, что я зацикливаюсь на каких-то вещах."
 		},
 		"reverse": false,
 		"val": null
@@ -394,7 +433,8 @@
 			"en": "I find a problem I can't solve distressing and/or hard to put down.",
 			"pt": "Considero que um problema que não consigo resolver é angustiante e/ou difícil de largar.",
 			"de": "Ich finde ein Problem, das ich nicht lösen kann, beunruhigend und/oder kann es nur schwer abstellen.",
-			"pl":"Problem, którego nie mogę rozwiązać, jest dla mnie stresujący i/lub trudny do odłożenia."
+			"pl":"Problem, którego nie mogę rozwiązać, jest dla mnie stresujący i/lub trudny do odłożenia.",
+			"rus":"Когда есть проблема, которую я не могу решить, я испытываю стресс и/или не могу перестать беспокоиться о ней."
 		},
 		"reverse": false,
 		"val": null
@@ -404,7 +444,8 @@
 			"en": "I tend to feel quite self-conscious unless I'm deeply absorbed in a task. ",
 			"pt": "Costumo sentir-me bastante consciente de mim próprio, a menos que esteja profundamente absorvido numa tarefa.",
 			"de": "Ich neige dazu, mich ziemlich unsicher zu fühlen, wenn ich nicht tief in eine Aufgabe vertieft bin.",
-			"pl":"Czuję się dość skrępowana/y, chyba że jestem głęboko pochłonięta/y jakimś zadaniem."
+			"pl":"Czuję się dość skrępowana/y, chyba że jestem głęboko pochłonięta/y jakimś zadaniem.",
+			"rus":"Обычно я чувствую себя довольно неловко, кроме моментов, когда я сильно сосредотачиваюсь на какой-то задаче."
 		},
 		"reverse": false,
 		"val": null
@@ -414,7 +455,8 @@
 			"en": "I often get stuck thinking about all the possibilities that might come out of a decision.",
 			"pt": "Fico frequentemente bloqueado a pensar em todas as possibilidades que podem resultar de uma decisão.",
 			"de": "Ich bleibe oft stecken, wenn ich über alle Möglichkeiten nachdenke, die sich aus einer Entscheidung ergeben könnten.",
-			"pl":"Często utykam w martwym punkcie, myśląc o wszystkich możliwościach, które mogą wyniknąć z danej decyzji."
+			"pl":"Często utykam w martwym punkcie, myśląc o wszystkich możliwościach, które mogą wyniknąć z danej decyzji.",
+			"rus":"Я часто зацикливаюсь на мыслях обо всех возможных последствиях при принятии решения."
 		},
 		"reverse": false,
 		"val": null
@@ -424,7 +466,8 @@
 			"en": "When I am interested in something, I tend to be passionate about it.",
 			"pt": "Quando estou interessado em alguma coisa, tenho tendência a apaixonar-me por ela.",
 			"de": "Wenn ich mich für eine Sache interessiere, neige ich dazu, mich für sie zu begeistern.",
-			"pl":"Kiedy jestem czymś zainteresowana/y, mam tendencję do pasjonowania się tym."
+			"pl":"Kiedy jestem czymś zainteresowana/y, mam tendencję do pasjonowania się tym.",
+			"rus":"Будучи заинтересованным/-ой в теме, я подхожу к ней с большим энтузиазмом."
 		},
 		"reverse": false,
 		"val": null
@@ -434,7 +477,8 @@
 			"en": "When I am interested in a topic, I like to learn everything I can about that topic. ",
 			"pt": "Quando me interesso por um tema, gosto de aprender tudo o que posso sobre o mesmo.",
 			"de": "Wenn ich mich für ein Thema interessiere, lerne ich gern alles, was ich darüber erfahren kann.",
-			"pl":"Kiedy interesuje mnie jakiś temat, lubię dowiedzieć się o nim wszystkiego, co tylko mogę."
+			"pl":"Kiedy interesuje mnie jakiś temat, lubię dowiedzieć się o nim wszystkiego, co tylko mogę.",
+			"rus":"Интерес к теме вызывает у меня желание изучить всю доступную о ней информацию."
 		},
 		"reverse": false,
 		"val": null
@@ -444,7 +488,8 @@
 			"en": "I am still fascinated by many of the things I was interested in when I was much younger.",
 			"pt": "Continuo a sentir-me fascinado por muitas das coisas que me interessavam quando era muito mais novo.",
 			"de": "Ich bin immer noch fasziniert von vielen Dingen, für die ich mich interessiert habe, als ich viel jünger war.",
-			"pl":"Nadal fascynuje mnie wiele rzeczy, którymi interesowałam/em się, gdy byłam/em znacznie młodsza/y."
+			"pl":"Nadal fascynuje mnie wiele rzeczy, którymi interesowałam/em się, gdy byłam/em znacznie młodsza/y.",
+			"rus":"Я все еще увлекаюсь многими вещами, которые интересовали меня, когда я был(а) намного младше."
 		},
 		"reverse": false,
 		"val": null
@@ -454,7 +499,8 @@
 			"en": "I rarely find myself getting stuck in loops of thought.",
 			"pt": "Raramente dou comigo mesmo preso em pensamentos circulares.",
 			"de": "Selten bleibe ich in Gedankenschleifen stecken.",
-			"pl":"Rzadko zdarza mi się utknąć w pętli myśli."
+			"pl":"Rzadko zdarza mi się utknąć w pętli myśli.",
+			"rus":"Я редко ловлю себя на том, что хожу по кругу в своих размышлениях."
 		},
 		"reverse": true,
 		"val": null
@@ -464,7 +510,8 @@
 			"en": "I often loop back to previous thoughts.",
 			"pt": "Volto frequentemente a pensamentos anteriores.",
 			"de": "Ich kehre oft zu früheren Gedanken zurück.",
-			"pl":"Często wracam do poprzednich myśli."
+			"pl":"Często wracam do poprzednich myśli.",
+			"rus":"В ходе размышления я часто возвращаюсь к предыдущим мыслям."
 		},
 		"reverse": false,
 		"val": null
