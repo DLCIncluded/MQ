@@ -29,6 +29,10 @@ export default {
 					"short": "pl",
 					"display": "Polish"
 				},
+				{ 
+					"short": "rus",
+					"display": "Russian"
+				},
 			],
 			questions : questions,
 			answers:answers,
