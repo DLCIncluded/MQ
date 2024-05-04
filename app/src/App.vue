@@ -33,6 +33,10 @@ export default {
 					"short": "rus",
 					"display": "Russian"
 				},
+				{ 
+					"short": "es",
+					"display": "Spanish"
+				},
 			],
 			questions : questions,
 			answers:answers,
@@ -334,6 +338,7 @@ export default {
 				<select name="lang" id="lang" v-model="lang">
 					<option v-for="(l,index) in lang_options" :key="index" :value="l.short">{{l.display}}</option>
 				</select>
+				<strong>Please note</strong>: these are community provided, I try my best to make sure they're correct however I only speak/read English, so if you notice anything incorrect please let me know!
 			</div>
 		</div>
     </div>

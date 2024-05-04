@@ -4,41 +4,47 @@
 	  "pt": "Nao aplicave",
 	  "de": "keine Antwort",
 	  "pl": "bez odpowiedzi",
-	  "rus":"Нет ответа"
+	  "rus":"Нет ответа",
+	  "es":"N/A "
 	},
 	"sd": {
 	  "en": "Strongly Disagree",
 	  "pt": "Discordo totalmente",
 	  "de": "Stimme überhaupt nicht zu",
 	  "pl": "Zdecydowanie się nie zgadzam",
-	  "rus":"Абсолютно не соглашаюсь"
+	  "rus":"Абсолютно не соглашаюсь",
+	  "es":"Muy en desacuerdo."
 	},
 	"d": {
 	  "en": "Disagree",
 	  "pt": "Discordo",
 	  "de": "Stimme nicht zu",
 	  "pl": "Nie zgadzam się",
-	  "rus":"Не соглашаюсь"
+	  "rus":"Не соглашаюсь",
+	  "es":"En desacuerdo."
 	},
 	"nad": {
 	  "en": "Neither Agree or Disagree",
 	  "pt": "Nem concordo nem discordo",
 	  "de": "Stimme weder zu noch lehne ich ab",
 	  "pl": "Trudno powiedzieć",
-	  "rus":"Нейтрально"
+	  "rus":"Нейтрально",
+	  "es":"Ni de acuerdo ni en desacuerdo."
 	},
 	"a": {
 	  "en": "Agree",
 	  "pt": "Concordo",
 	  "de": "Stimme zu",
 	  "pl": "Zgadzam się",
-	  "rus":"Соглашаюсь"
+	  "rus":"Соглашаюсь",
+	  "es":"De acuerdo."
 	},
 	"sa": {
 	  "en": "Strongly Agree",
 	  "pt": "Concordo totalmente",
 	  "de": "Stimme voll und ganz zu",
 	  "pl": "Zdecydowanie się zgadzam",
-	  "rus":"Полностью соглашаюсь"
+	  "rus":"Полностью соглашаюсь",
+	  "es":"Muy de acuerdo."
 	}
   }
