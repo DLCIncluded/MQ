@@ -10,14 +10,14 @@
 	  "en": "Strongly Disagree",
 	  "pt": "Discordo totalmente",
 	  "de": "Stimme überhaupt nicht zu",
-	  "pl": "Zdecydowanie się zgadzam",
+	  "pl": "Zdecydowanie się nie zgadzam",
 	  "rus":"Абсолютно не соглашаюсь"
 	},
 	"d": {
 	  "en": "Disagree",
 	  "pt": "Discordo",
 	  "de": "Stimme nicht zu",
-	  "pl": "Zgadzam się",
+	  "pl": "Nie zgadzam się",
 	  "rus":"Не соглашаюсь"
 	},
 	"nad": {
@@ -31,14 +31,14 @@
 	  "en": "Agree",
 	  "pt": "Concordo",
 	  "de": "Stimme zu",
-	  "pl": "Nie zgadzam się",
+	  "pl": "Zgadzam się",
 	  "rus":"Соглашаюсь"
 	},
 	"sa": {
 	  "en": "Strongly Agree",
 	  "pt": "Concordo totalmente",
 	  "de": "Stimme voll und ganz zu",
-	  "pl": "Zdecydowanie się nie zgadzam",
+	  "pl": "Zdecydowanie się zgadzam",
 	  "rus":"Полностью соглашаюсь"
 	}
   }
