@@ -5,7 +5,8 @@
 	  "de": "keine Antwort",
 	  "pl": "bez odpowiedzi",
 	  "rus":"Нет ответа",
-	  "es":"N/A "
+	  "es":"N/A",
+	  "fr":"N/a "
 	},
 	"sd": {
 	  "en": "Strongly Disagree",
@@ -13,7 +14,8 @@
 	  "de": "Stimme überhaupt nicht zu",
 	  "pl": "Zdecydowanie się nie zgadzam",
 	  "rus":"Абсолютно не соглашаюсь",
-	  "es":"Muy en desacuerdo"
+	  "es":"Muy en desacuerdo",
+	  "fr":"Totalement en désaccord"
 	},
 	"d": {
 	  "en": "Disagree",
@@ -21,7 +23,8 @@
 	  "de": "Stimme nicht zu",
 	  "pl": "Nie zgadzam się",
 	  "rus":"Не соглашаюсь",
-	  "es":"En desacuerdo"
+	  "es":"En desacuerdo",
+	  "fr":"Pas d’accord"
 	},
 	"nad": {
 	  "en": "Neither Agree or Disagree",
@@ -29,7 +32,8 @@
 	  "de": "Stimme weder zu noch lehne ich ab",
 	  "pl": "Trudno powiedzieć",
 	  "rus":"Нейтрально",
-	  "es":"Ni de acuerdo ni en desacuerdo"
+	  "es":"Ni de acuerdo ni en desacuerdo",
+	  "fr":"Ni d’accord ni en désaccord"
 	},
 	"a": {
 	  "en": "Agree",
@@ -37,7 +41,8 @@
 	  "de": "Stimme zu",
 	  "pl": "Zgadzam się",
 	  "rus":"Соглашаюсь",
-	  "es":"De acuerdo"
+	  "es":"De acuerdo",
+	  "fr":"D’accord"
 	},
 	"sa": {
 	  "en": "Strongly Agree",
@@ -45,6 +50,7 @@
 	  "de": "Stimme voll und ganz zu",
 	  "pl": "Zdecydowanie się zgadzam",
 	  "rus":"Полностью соглашаюсь",
-	  "es":"Muy de acuerdo"
+	  "es":"Muy de acuerdo",
+	  "fr":"Tout à fait d’accord"
 	}
   }
