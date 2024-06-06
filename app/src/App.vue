@@ -421,17 +421,64 @@ export default {
 
 <style scoped>
 .question{
-	padding: 2em 0;
+	padding: 1.5em 0;
+	font-size: large;
 }
 .selections {
 	display:flex;
 	flex-wrap: nowrap;
+	padding-bottom: 2em;
+	border-bottom:1px dotted rgba(255, 255, 255, 0.3);
 }
+
 .selections>p {
 	flex-grow:1;
 	display: flex;
 	flex-direction: column-reverse;
 	text-align: center;
+	border:1px solid rgba(255, 255, 255, 0.5);
+	border-radius: .5em;
+	margin:0.2em;
+	padding-top: .2em;
+	padding-bottom: .2em;
+}
+
+.selections > p:nth-child(1){
+	background-color: rgba(29, 29, 29, 0.1)!important;
+}
+
+.selections > p:nth-child(2){
+	background-color: rgba(128, 0, 0, 0.1)!important;
+}
+
+.selections > p:nth-child(3){
+	background-color: rgba(172, 29, 29, 0.1)!important;
+}
+
+.selections > p:nth-child(4){
+	background-color: rgba(87, 87, 87, 0.1)!important;
+}
+
+.selections > p:nth-child(5){
+	background-color: rgba(0, 255, 34, 0.1)!important;
+	
+}
+
+.selections > p:nth-child(6){
+	background-color: rgba(0, 194, 26, 0.1)!important;
+}
+
+
+.selections>p>label {
+	display: block;
+	width:100%;
+}
+.selections>p>label:hover {
+	cursor: pointer!important;
+}
+
+.selections>p>input:hover {
+	cursor: pointer!important;
 }
 .submit {
 	display: flex;
@@ -472,6 +519,10 @@ strong{
 		display:flex;
 		flex-direction: column;
 		flex-wrap: nowrap;
+		
+	}
+	.selections input{
+		margin-left: 1rem;
 	}
 	.selections>p {
 		flex-grow:1;
