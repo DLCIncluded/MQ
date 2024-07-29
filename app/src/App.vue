@@ -219,6 +219,7 @@ export default {
 			console.log("draw dot")
 			const image = this.$refs.image;
 			const arrow = this.$refs.arrow;
+			const arrowdot = this.$refs.arrowdot;
 
 			const { scaleX, scaleY } = this.getScaleFactors(image);
 
@@ -236,6 +237,9 @@ export default {
 
 			arrow.style.left = `${scorePosition.x}px`;
 			arrow.style.top = `${scorePosition.y}px`;
+
+			arrowdot.style.left = `${scorePosition.x}px`;
+			arrowdot.style.top = `${scorePosition.y}px`;
 		},
 		getScaleFactors(image) {
 			const naturalWidth = image.naturalWidth;
@@ -399,7 +403,9 @@ export default {
 			<div style="position:relative">
 				<img ref="image" src="./assets/mq.png" alt="Scale Image" style="width: 100%" @load="drawArrow">
 				<div ref="arrow" class="arrow"><i class="gg-arrow-long-up-c"></i></div>
+				<div ref="arrowdot" class="arrow dot">•</div>
 			</div>
+			<p>I know this is may be difficult to see on mobile, but please remember this is just a rough placement of your score anyways, only the X axis is showing data, so it is a visual representation of where on the 1-5 scale you fall just for a visual.</p>
 			
 			
 			<!-- <p>
@@ -542,6 +548,12 @@ strong{
 		position: absolute;
 		transform: translate(-50%, -80%)!important;
 	}
+	.dot {
+		color: black;
+		position: absolute;
+		transform: translate(-50%, -130%)!important;
+		font-size: 1rem!important;
+	}
 
 	.gg-arrow-long-up-c {
 		transform: scale(1,.8) !important;
@@ -640,6 +652,14 @@ strong{
   transform: translate(-50%, -150%);
 }
 
+.dot {
+	color: black;
+	position: absolute;
+  	transform: translate(-50%, -162%);
+	font-size: 2.5rem;
+}
+
+
 .gg-arrow-long-up-c {
 	color:#8803fc;
     box-sizing: border-box;
@@ -667,7 +687,7 @@ strong{
     border-left: 2px solid;
     transform: rotate(45deg);
     top: 0;
-    left: -2px
+    left: -2px;
 }
 .gg-arrow-long-up-c::before {
     width: 6px;
@@ -675,6 +695,6 @@ strong{
     border: 2px solid;
     border-radius: 8px;
     bottom: -4px;
-    left: -2px
+    left: -2px;
 }
 </style>
