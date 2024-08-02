@@ -8,6 +8,7 @@ import { create, all } from "mathjs";
 const math = create(all);
 import questions from "./questions.json"
 import answers from "./answers.json"
+import mqImage from '@/assets/mq.png';
 export default {
 	data() {
 		return {
@@ -55,6 +56,7 @@ export default {
 			progress: 0,
 			point1: { x: 251, y: 337 }, 
 			point5: { x: 1352, y: 337 },
+			arrowColor: 'blue',
 		}
 	},
 	created:function(){
@@ -240,6 +242,18 @@ export default {
 
 			arrowdot.style.left = `${scorePosition.x}px`;
 			arrowdot.style.top = `${scorePosition.y}px`;
+
+			const unscaledPoint1 = {
+				x: this.point1.x,
+				y: this.point1.y
+			};
+
+			const unscaledPoint5 = {
+				x: this.point5.x,
+				y: this.point5.y
+			};
+			const unscaledscorePosition = this.calculateScorePosition(unscaledPoint1, unscaledPoint5);
+			this.drawImageWithDot(unscaledscorePosition) //TODO: update this code, moved to using canvas so now it renders on the image, but this is all hacked together now and don't have time to clean up
 		},
 		getScaleFactors(image) {
 			const naturalWidth = image.naturalWidth;
@@ -259,6 +273,71 @@ export default {
 			const scoreY = scaledPoint1.y + scoreRatio * (scaledPoint5.y - scaledPoint1.y);
 
 			return { x: scoreX, y: scoreY };
+		},
+		drawImageWithDot(scorePosition) {
+			const canvas = this.$refs.canvas;
+			const ctx = canvas.getContext('2d');
+			const img = new Image();
+			img.src = mqImage; // img imported on startup
+
+			img.onload = () => {
+				// Set canvas size to match the image size
+				canvas.width = img.width;
+				canvas.height = img.height;
+
+				// Draw the image
+				ctx.drawImage(img, 0, 0);
+
+				// Calculate the position for the dot based on the score
+				// const dotX = (this.userScore / 100) * canvas.width;
+				// const dotY = canvas.height / 2; // Example vertical position
+				
+				const dotX = scorePosition.x;
+				const dotY = scorePosition.y; 
+				// arrow.style.left = `${scorePosition.x}px`;
+				// arrow.style.top = `${scorePosition.y}px`;
+
+				// arrowdot.style.left = `${scorePosition.x}px`;
+				// arrowdot.style.top = `${scorePosition.y}px`;
+
+				// Draw the dot
+				ctx.beginPath();
+				ctx.arc(dotX, dotY, 8, 0, Math.PI * 2, true); // 5 is the radius of the dot
+				ctx.fillStyle = this.arrowColor; // Color of the dot
+				ctx.fill();
+
+				this.drawArrowOnCanvas(ctx, dotX, dotY);
+
+
+			};
+		},
+		drawArrowOnCanvas(ctx, x, y) {
+			const arrowHeight = 40;
+			const arrowWidth = 20;
+			const lineWidth = 8;
+			
+
+			// Draw the line
+			ctx.beginPath();
+			ctx.moveTo(x, y);
+			ctx.lineTo(x, y - arrowHeight);
+			ctx.strokeStyle = this.arrowColor;
+			ctx.lineWidth = lineWidth;
+			ctx.stroke();
+
+			// Draw the arrowhead
+			ctx.beginPath();
+			ctx.moveTo(x - arrowWidth / 2, y - arrowHeight);
+			ctx.lineTo(x + arrowWidth / 2, y - arrowHeight);
+			ctx.lineTo(x, y - arrowHeight - arrowWidth);
+			ctx.closePath();
+			ctx.fillStyle = this.arrowColor;
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.arc(x, y-arrowHeight-40, 8, 0, Math.PI * 2, true); // 5 is the radius of the dot
+			ctx.fillStyle = this.arrowColor; // Color of the dot
+			ctx.fill();
 		},
 	},
 	computed: {
@@ -400,10 +479,14 @@ export default {
 			<p v-html="scoreQuote"></p>
 			<br>
 			<p>For visual reference based on the original study, the arrow points to where you would fall on their chart:</p>
-			<div style="position:relative">
+			<div style="position:relative;display: none;">
 				<img ref="image" src="./assets/mq.png" alt="Scale Image" style="width: 100%" @load="drawArrow">
 				<div ref="arrow" class="arrow"><i class="gg-arrow-long-up-c"></i></div>
 				<div ref="arrowdot" class="arrow dot">•</div>
+			</div>
+
+			<div>
+				<canvas ref="canvas" style="width: 100%" ></canvas>
 			</div>
 			<p>I know this is may be difficult to see on mobile, but please remember this is just a rough placement of your score anyways, only the X axis is showing data, so it is a visual representation of where on the 1-5 scale you fall just for a visual.</p>
 			
@@ -696,5 +779,9 @@ strong{
     border-radius: 8px;
     bottom: -4px;
     left: -2px;
+}
+
+canvas {
+  border: 1px solid black;
 }
 </style>
