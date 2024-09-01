@@ -57,6 +57,7 @@ export default {
 			point1: { x: 251, y: 337 }, 
 			point5: { x: 1352, y: 337 },
 			arrowColor: 'blue',
+			showColor: false,
 		}
 	},
 	created:function(){
@@ -428,6 +429,14 @@ export default {
 				<br/>
 				<strong>Please note</strong>: these are community provided, I try my best to make sure they're correct however I only speak/read English, so if you notice anything incorrect please let me know!
 			</div>
+			<div class='color_opts'>
+				Optional Color Coded Answers:
+				<select name="lang" id="lang" v-model="showColor">
+					<option value=true>Color</option>
+					<option value=false>No Color</option>
+				</select>
+				<br/>
+			</div>
 		</div>
     </div>
   </header>
@@ -441,7 +450,7 @@ export default {
 				{{item.question[lang]}} 
 
 			</div>
-			<div v-if="!item.reverse" class='selections'>
+			<div v-if="!item.reverse" class='selections' :class="{ hasColor: showColor }">
 				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'0'" v-model="item.val" value="0" :checked="item.val == '0'" @change="updateProgress"><label :for="'r'+index+'0'">{{answers.na[lang]}}</label></p>
 				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'1'" v-model="item.val" value="1" :checked="item.val == '1'" @change="updateProgress"><label :for="'r'+index+'1'">{{answers.sd[lang]}}</label></p>
 				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'2'" v-model="item.val" value="2" :checked="item.val == '2'" @change="updateProgress"><label :for="'r'+index+'2'">{{answers.d[lang]}}</label></p>
@@ -449,7 +458,7 @@ export default {
 				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'4'" v-model="item.val" value="4" :checked="item.val == '4'" @change="updateProgress"><label :for="'r'+index+'4'">{{answers.a[lang]}}</label></p>
 				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'5'" v-model="item.val" value="5" :checked="item.val == '5'" @change="updateProgress"><label :for="'r'+index+'5'">{{answers.sa[lang]}}</label></p>
 			</div>
-			<div v-else class='selections'>
+			<div v-else class='selections' :class="{ hasColor: showColor }">
 				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'0'" v-model="item.val" value="0" :checked="item.val == '0'" @change="updateProgress"><label :for="'r'+index+'0'">{{answers.na[lang]}}</label></p>
 				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'1'" v-model="item.val" value="5" :checked="item.val == '5'" @change="updateProgress"><label :for="'r'+index+'1'">{{answers.sd[lang]}}</label></p>
 				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'2'" v-model="item.val" value="4" :checked="item.val == '4'" @change="updateProgress"><label :for="'r'+index+'2'">{{answers.d[lang]}}</label></p>
@@ -518,10 +527,12 @@ export default {
 	flex-wrap: nowrap;
 	padding-bottom: 2em;
 	border-bottom:1px dotted rgba(255, 255, 255, 0.3);
+	
 }
 
 .selections>p {
-	flex-grow:1;
+	/* flex-grow:1; */
+	flex: 1;
 	display: flex;
 	flex-direction: column-reverse;
 	text-align: center;
@@ -530,30 +541,31 @@ export default {
 	margin:0.2em;
 	padding-top: .2em;
 	padding-bottom: .2em;
+	justify-content: space-between;
 }
 
-.selections > p:nth-child(1){
+.hasColor > p:nth-child(1){
 	background-color: rgba(29, 29, 29, 0.1)!important;
 }
 
-.selections > p:nth-child(2){
+.hasColor > p:nth-child(2){
 	background-color: rgba(128, 0, 0, 0.1)!important;
 }
 
-.selections > p:nth-child(3){
+.hasColor > p:nth-child(3){
 	background-color: rgba(172, 29, 29, 0.1)!important;
 }
 
-.selections > p:nth-child(4){
+.hasColor > p:nth-child(4){
 	background-color: rgba(87, 87, 87, 0.1)!important;
 }
 
-.selections > p:nth-child(5){
+.hasColor > p:nth-child(5){
 	background-color: rgba(0, 255, 34, 0.1)!important;
 	
 }
 
-.selections > p:nth-child(6){
+.hasColor > p:nth-child(6){
 	background-color: rgba(0, 194, 26, 0.1)!important;
 }
 
