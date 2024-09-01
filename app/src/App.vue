@@ -432,8 +432,8 @@ export default {
 			<div class='color_opts'>
 				Optional Color Coded Answers:
 				<select name="lang" id="lang" v-model="showColor">
-					<option value=true>Color</option>
-					<option value=false>No Color</option>
+					<option :value="true">Color</option>
+					<option :value="false">No Color</option>
 				</select>
 				<br/>
 			</div>
@@ -542,6 +542,10 @@ export default {
 	padding-top: .2em;
 	padding-bottom: .2em;
 	justify-content: space-between;
+}
+
+.selections > p{
+	background-color: rgba(29, 29, 29, 0.1)!important;
 }
 
 .hasColor > p:nth-child(1){
