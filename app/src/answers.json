@@ -6,7 +6,8 @@
 	  "pl": "bez odpowiedzi",
 	  "rus":"Нет ответа",
 	  "es":"N/A",
-	  "fr":"N/a "
+	  "fr":"N/a ",
+    "nl": "n.v.t."
 	},
 	"sd": {
 	  "en": "Strongly Disagree",
@@ -15,7 +16,8 @@
 	  "pl": "Zdecydowanie się nie zgadzam",
 	  "rus":"Абсолютно не соглашаюсь",
 	  "es":"Muy en desacuerdo",
-	  "fr":"Totalement en désaccord"
+	  "fr":"Totalement en désaccord",
+    "nl": "Helemaal mee oneens"
 	},
 	"d": {
 	  "en": "Disagree",
@@ -24,7 +26,8 @@
 	  "pl": "Nie zgadzam się",
 	  "rus":"Не соглашаюсь",
 	  "es":"En desacuerdo",
-	  "fr":"Pas d’accord"
+	  "fr":"Pas d’accord",
+    "nl": "Oneens"
 	},
 	"nad": {
 	  "en": "Neither Agree or Disagree",
@@ -33,7 +36,8 @@
 	  "pl": "Trudno powiedzieć",
 	  "rus":"Нейтрально",
 	  "es":"Ni de acuerdo ni en desacuerdo",
-	  "fr":"Ni d’accord ni en désaccord"
+	  "fr":"Ni d’accord ni en désaccord",
+    "nl": "Geen van beide"
 	},
 	"a": {
 	  "en": "Agree",
@@ -42,7 +46,8 @@
 	  "pl": "Zgadzam się",
 	  "rus":"Соглашаюсь",
 	  "es":"De acuerdo",
-	  "fr":"D’accord"
+	  "fr":"D’accord",
+    "nl": "Eens"
 	},
 	"sa": {
 	  "en": "Strongly Agree",
@@ -51,6 +56,7 @@
 	  "pl": "Zdecydowanie się zgadzam",
 	  "rus":"Полностью соглашаюсь",
 	  "es":"Muy de acuerdo",
-	  "fr":"Tout à fait d’accord"
+	  "fr":"Tout à fait d’accord",
+    "nl": "Helemaal mee eens"
 	}
   }

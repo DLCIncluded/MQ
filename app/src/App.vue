@@ -42,6 +42,10 @@ export default {
 					"short": "fr",
 					"display": "French"
 				},
+				{ 
+					"short": "nl",
+					"display": "Dutch"
+				},
 			],
 			questions : questions,
 			answers:answers,
