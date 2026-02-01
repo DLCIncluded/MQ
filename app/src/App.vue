@@ -9,9 +9,14 @@ const math = create(all);
 import questions from "./questions.json"
 import answers from "./answers.json"
 import mqImage from '@/assets/mq.png';
+
+const urlParams = new URLSearchParams(window.location.search);
+const langURL = urlParams.get('lang'); 
+
 export default {
 	data() {
 		return {
+			langURL: langURL,
 			lang: "en",
 			lang_options: [
 				{ 
@@ -358,7 +363,7 @@ export default {
 			ctx.arc(x, y-arrowHeight-40, 8, 0, Math.PI * 2, true); // 5 is the radius of the dot
 			ctx.fillStyle = this.arrowColor; // Color of the dot
 			ctx.fill();
-		},
+		}
 	},
 	computed: {
 		completedQuestions() {
@@ -368,8 +373,24 @@ export default {
 			return `${(this.progress / this.questions.length) * 100}%`;
 		},
 	},
+	created(){
+		if(this.langURL){
+			//check if the langURL is valid
+			let found = false
+			for(let i=0;i<this.lang_options.length;i++){
+				if(this.lang_options[i].short == this.langURL){
+					found = true
+					break
+				}
+			}
+			if(found){
+				this.lang = this.langURL
+			}
+		}
+	},
 	mounted() {
 		window.addEventListener('resize', this.drawArrow);
+		
 	},
 	beforeDestroy() {
 		window.removeEventListener('resize', this.handleResize);
