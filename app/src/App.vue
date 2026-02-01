@@ -119,8 +119,23 @@ export default {
 			this.errorbox=false
 
 			let l = this.questions.length;
+
+			// loop through twice - first to set error classes, second to show error box
 			for (var i = 0; i < l; i++) {
 				var x = this.questions[i].val
+				if (x === null) {
+					//set class to show error
+					this.questions[i].unanswered=true
+				}
+				else {
+					this.questions[i].unanswered=false
+				}
+			}
+			// console.log(this.questions)
+
+			for (var i = 0; i < l; i++) {
+				var x = this.questions[i].val
+
 				if (x === null) {
 					this.errorbox=true
 					console.log("found null")
@@ -448,27 +463,27 @@ export default {
 	<div class="questions">
 
 		<h2 class="qtitle">Questionnaire:</h2>
-		<div v-for="(item,index) in questions" :key="index">
+		<div v-for="(item,index) in questions" :key="index" :class="{ unanswered: item.unanswered }">
 			<div class="question">
 				<!-- {{ index+1 }}) -->
 				{{item.question[lang]}} 
 
 			</div>
 			<div v-if="!item.reverse" class='selections' :class="{ hasColor: showColor }">
-				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'0'" v-model="item.val" value="0" :checked="item.val == '0'" @change="updateProgress"><label :for="'r'+index+'0'">{{answers.na[lang]}}</label></p>
-				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'1'" v-model="item.val" value="1" :checked="item.val == '1'" @change="updateProgress"><label :for="'r'+index+'1'">{{answers.sd[lang]}}</label></p>
-				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'2'" v-model="item.val" value="2" :checked="item.val == '2'" @change="updateProgress"><label :for="'r'+index+'2'">{{answers.d[lang]}}</label></p>
-				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'3'" v-model="item.val" value="3" :checked="item.val == '3'" @change="updateProgress"><label :for="'r'+index+'3'">{{answers.nad[lang]}}</label></p>
-				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'4'" v-model="item.val" value="4" :checked="item.val == '4'" @change="updateProgress"><label :for="'r'+index+'4'">{{answers.a[lang]}}</label></p>
-				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'5'" v-model="item.val" value="5" :checked="item.val == '5'" @change="updateProgress"><label :for="'r'+index+'5'">{{answers.sa[lang]}}</label></p>
+				<p @click="updateSlider; item.unanswered=false"><input type="radio" :name="index" :id="'r'+index+'0'" v-model="item.val" value="0" :checked="item.val == '0'" @change="updateProgress"><label :for="'r'+index+'0'">{{answers.na[lang]}}</label></p>
+				<p @click="updateSlider; item.unanswered=false"><input type="radio" :name="index" :id="'r'+index+'1'" v-model="item.val" value="1" :checked="item.val == '1'" @change="updateProgress"><label :for="'r'+index+'1'">{{answers.sd[lang]}}</label></p>
+				<p @click="updateSlider; item.unanswered=false"><input type="radio" :name="index" :id="'r'+index+'2'" v-model="item.val" value="2" :checked="item.val == '2'" @change="updateProgress"><label :for="'r'+index+'2'">{{answers.d[lang]}}</label></p>
+				<p @click="updateSlider; item.unanswered=false"><input type="radio" :name="index" :id="'r'+index+'3'" v-model="item.val" value="3" :checked="item.val == '3'" @change="updateProgress"><label :for="'r'+index+'3'">{{answers.nad[lang]}}</label></p>
+				<p @click="updateSlider; item.unanswered=false"><input type="radio" :name="index" :id="'r'+index+'4'" v-model="item.val" value="4" :checked="item.val == '4'" @change="updateProgress"><label :for="'r'+index+'4'">{{answers.a[lang]}}</label></p>
+				<p @click="updateSlider; item.unanswered=false"><input type="radio" :name="index" :id="'r'+index+'5'" v-model="item.val" value="5" :checked="item.val == '5'" @change="updateProgress"><label :for="'r'+index+'5'">{{answers.sa[lang]}}</label></p>
 			</div>
 			<div v-else class='selections' :class="{ hasColor: showColor }">
-				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'0'" v-model="item.val" value="0" :checked="item.val == '0'" @change="updateProgress"><label :for="'r'+index+'0'">{{answers.na[lang]}}</label></p>
-				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'1'" v-model="item.val" value="5" :checked="item.val == '5'" @change="updateProgress"><label :for="'r'+index+'1'">{{answers.sd[lang]}}</label></p>
-				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'2'" v-model="item.val" value="4" :checked="item.val == '4'" @change="updateProgress"><label :for="'r'+index+'2'">{{answers.d[lang]}}</label></p>
-				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'3'" v-model="item.val" value="3" :checked="item.val == '3'" @change="updateProgress"><label :for="'r'+index+'3'">{{answers.nad[lang]}}</label></p>
-				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'4'" v-model="item.val" value="2" :checked="item.val == '2'" @change="updateProgress"><label :for="'r'+index+'4'">{{answers.a[lang]}}</label></p>
-				<p @click="updateSlider"><input type="radio" :name="index" :id="'r'+index+'5'" v-model="item.val" value="1" :checked="item.val == '1'" @change="updateProgress"><label :for="'r'+index+'5'">{{answers.sa[lang]}}</label></p>
+				<p @click="updateSlider; item.unanswered=false"><input type="radio" :name="index" :id="'r'+index+'0'" v-model="item.val" value="0" :checked="item.val == '0'" @change="updateProgress"><label :for="'r'+index+'0'">{{answers.na[lang]}}</label></p>
+				<p @click="updateSlider; item.unanswered=false"><input type="radio" :name="index" :id="'r'+index+'1'" v-model="item.val" value="5" :checked="item.val == '5'" @change="updateProgress"><label :for="'r'+index+'1'">{{answers.sd[lang]}}</label></p>
+				<p @click="updateSlider; item.unanswered=false"><input type="radio" :name="index" :id="'r'+index+'2'" v-model="item.val" value="4" :checked="item.val == '4'" @change="updateProgress"><label :for="'r'+index+'2'">{{answers.d[lang]}}</label></p>
+				<p @click="updateSlider; item.unanswered=false"><input type="radio" :name="index" :id="'r'+index+'3'" v-model="item.val" value="3" :checked="item.val == '3'" @change="updateProgress"><label :for="'r'+index+'3'">{{answers.nad[lang]}}</label></p>
+				<p @click="updateSlider; item.unanswered=false"><input type="radio" :name="index" :id="'r'+index+'4'" v-model="item.val" value="2" :checked="item.val == '2'" @change="updateProgress"><label :for="'r'+index+'4'">{{answers.a[lang]}}</label></p>
+				<p @click="updateSlider; item.unanswered=false"><input type="radio" :name="index" :id="'r'+index+'5'" v-model="item.val" value="1" :checked="item.val == '1'" @change="updateProgress"><label :for="'r'+index+'5'">{{answers.sa[lang]}}</label></p>
 			</div>
 			
 		</div>
@@ -803,5 +818,9 @@ strong{
 
 canvas {
   border: 1px solid black;
+}
+
+.unanswered {
+	background-color: rgba(255, 0, 0, 0.1);
 }
 </style>
